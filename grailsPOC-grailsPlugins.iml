@@ -9,25 +9,23 @@
         <webroots>
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.4.0/grails-app/views" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.5/web-app" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="sessionFactory" />
+        </datasource-map>
         <naming-strategy-map />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.7">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.7/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.7/grails-app/controllers" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.7/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.8.7/grails-app/taglib" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/src/groovy" isTestSource="false" />
@@ -46,6 +44,12 @@
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/grails-app/taglib" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.14/grails-app/taglib" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.0">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.0/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.0/src/groovy" isTestSource="false" />
@@ -54,6 +58,10 @@
     <content url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.53">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.53/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.53/src/groovy" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.5">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.5/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.5/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
@@ -146,7 +154,6 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-gorm-hibernate/3.1.0.RELEASE/grails-datastore-gorm-hibernate-3.1.0.RELEASE.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/net/sf/ehcache/ehcache-core/2.4.8/ehcache-core-2.4.8.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-ehcache/3.6.10.Final/hibernate-ehcache-3.6.10.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6.jar!/" />
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.0/lib/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar!/" />

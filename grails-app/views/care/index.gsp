@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Pets | Home</title>
+<title>My Pets | Care</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -32,19 +32,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/easing.js"></script>
 </head>
 <style>
-	.submitLink {
-		background-color: transparent;
-		text-decoration:none;
-		border: none;
-		cursor: pointer;
-		margin: 0px;
-		padding: 0px 10px 0px 0px;
-	}
+.submitLink {
+	background-color: transparent;
+	text-decoration:none;
+	border: none;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
+}
 
-	.submitLink:hover{
-		color: #4597a8;
-		text-decoration:none;
-	}
+.submitLink:hover{
+	color: #4597a8;
+	text-decoration:none;
+}
 
 </style>
 <body>
@@ -66,25 +66,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-menu">
 					<ul>
 					<nav class="cl-effect-5">
-						<li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
+						<li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
 						<li><a href="${createLink(controller: 'about', action: 'index')}">About</a></li>
 						<li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
-						<li><a href="${createLink(controller: 'care', action: 'index')}">Care</a></li>
+						<li><a class="active" href="${createLink(controller: 'care', action: 'index')}">Care</a></li>
 						<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
 						<!--<li><a href="${createLink(controller: 'contact', action: 'index')}"><span data-hover="Contact">Contact</span></a></li>-->
 						<g:if test="${logged == true}">
-						<li>
-							<a>
-								<form method="post" controller="home" action="logout">
-									<input type="submit" class="submitLink" value="LOG OUT"/>
-								</form>
-							</a>
-						</li>
+							<li>
+								<a>
+									<form method="post" controller="home" action="logout">
+										<input type="submit" class="submitLink" value="LOG OUT"/>
+									</form>
+								</a>
+							</li>
 						</g:if>
-					<g:else>
-						<li><a href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
-					</g:else>
-						</nav>
+						<g:else>
+							<li><a href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+						</g:else></nav>
 					</ul>
 				</div>
 				<!-- script for menu -->
@@ -96,93 +95,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			</script>
 			<!-- script for menu -->
-					<div class="clearfix"></div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 	</div>
 	<!-- header-section-ends -->
-	<div class="banner">
-		<!----->
-	<div class="slider">	  
-		  <div class="callbacks_container">
-			  <ul class="rslides" id="slider">
-				 <li>
-					 <img src="images/3.jpg" alt=""/>
-					  <div class="caption">
-						<h2>Until one has loved an animal a part of one's soul remains unawakened.</h2>
-						<a class="more" href="#">READ MORE</a>
-					  </div>
-				 </li>
-				 <li>
-					 <img src="images/2.jpg" alt=""/>
-					  <div class="caption">
-						<h2>A dog is the only thing on earth that loves you more than you love yourself.</h2>
-						<a class="more" href="#">READ MORE</a>
-					  </div>
-				 </li>
-				 <li>
-					 <img src="images/1.jpg" alt=""/>
-					  <div class="caption">
-						<h2>Money can buy you a fine dog, but only love can make him wag his tail.</h2>
-						<a class="more" href="#">READ MORE</a>
-					  </div>
-				 </li>
-			  </ul>	      
-		  </div>
-	</div>
-	<!----->
-	</div>
 	<!-- content-section-starts -->
-		<div class="content">
-			<div class="welcome-section">
-				<div class="container">
-					<div class="col-md-6 welcome-grid text-center">
-						<h3>Welcome</h3>
-						<h5>Duis autem vel eum iriure dolor in hendrerit in vulputa</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-						<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. littera gothica.</p>
-					</div>
-					<div class="col-md-6 images">
-						<div class="img1">
-							<img src="images/a1.jpg" class="img-responsive" alt="" />
-						</div>
-						<div class="img2">
-						<img src="images/a2.jpg" class="img-responsive" alt="" />
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="clearfix"></div>
+	<div class="content">
+			<div class="container">
+			    <!--404-->
+			<div class="error">
+				<div class="error-head">
+					<h1>404</h1>
+					<h2>Sorry This page is not found...!</h2>
+					<a class="hvr-bounce-to-left button" href="${createLink(controller: 'home', action: 'index')}">Go Back</a>
 				</div>
-			</div>
-			<div class="about-section text-center">
-				<div class="container">
-					<h2>About</h2>
-					<div class="col-md-6 about-section-grid text-left">
-						<h4>Mirum est notare quam littera </h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
-					</div>
-					<div class="col-md-6 about-section-grid text-left">
-						<h4>Mirum est notare quam littera </h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
-					</div>
-					<div class="clearfix"></div>
-					<a href="${createLink(controller: 'about', action: 'index')}" class="btn btn-1 btn-1c">read more</a>
-				</div>
-			</div>
-			<div class="textimonials-section text-center">
-				<div class="container">
-					<img src="images/t.png" alt="" />
-					<h5>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram</h5>
-					<p>Duis autem vel eum iriure dolor</p>
-					<a href="" class="btn btn-1 btn-1d">Read Testimonials</a>
-				</div>
-			</div>
-		</div>
+			</div>				
+	       </div>
+	</div> 
 	<!-- content-section-ends -->
-	<div class="main-map">
-		    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f75eafe99997%3A0x558525e66aaa51a2!2sKansas+City%2C+MO%2C+USA!5e0!3m2!1sen!2sin!4v1416895090472"  frameborder="0" style="border:0"></iframe>
-		</div>
-
 	<!-- footer-section-starts -->
 	<div class="footer">
 		<div class="container">

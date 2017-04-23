@@ -7,6 +7,41 @@ class UrlMappings {
             action = [GET: "index"]
         }
 
+        "/home"{
+            controller = "home"
+            action = [GET: "index"]
+        }
+
+        "/about"{
+            controller = "about"
+            action = [GET: "index"]
+        }
+
+        "/contact"{
+            controller = "contact"
+            action = [GET: "index"]
+        }
+
+        "/photos"{
+            controller = "photos"
+            action = [GET: "index"]
+        }
+
+        "/blogs"{
+            controller = "blogs"
+            action = [GET: "index"]
+        }
+
+        "/blog"{
+            controller = "blog"
+            action = [GET: "index"]
+        }
+
+        "/care"{
+            controller = "care"
+            action = [GET: "index"]
+        }
+
         "/login"{
             controller = "login"
             action = [GET:"index", POST: "login"]

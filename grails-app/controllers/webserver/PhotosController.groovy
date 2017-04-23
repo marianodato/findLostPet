@@ -1,6 +1,6 @@
 package webserver
 
-class HomeController {
+class PhotosController {
 
     def sessionService
 
@@ -18,15 +18,7 @@ class HomeController {
             model.logged = true
         }
 
-        render (view:"/home/index", model:model)
+        render (view:"/photos/index",model:model)
         return
     }
-
-    def logout(){
-        session.invalidate()
-        redirect(controller: "home", action: "index")
-        //redirect(controller: "login", action: "index")
-        return
-    }
-
 }

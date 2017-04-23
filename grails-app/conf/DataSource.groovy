@@ -36,7 +36,7 @@ environments {
             driverClassName = "com.mysql.jdbc.Driver"
             username = "root"
             password = "root"
-            url = "jdbc:mysql://127.0.0.1:3306/pointCat"
+            url = "jdbc:mysql://127.0.0.1:3306/psj"
 
             properties {
                 testOnBorrow = false // en true puede tener impacto en la performance

@@ -38,5 +38,9 @@
 # IntelliJ IDEA files
 *.idea
 
-# object files
+# Object files
 *out
+
+# Cache
+*.slcache
+

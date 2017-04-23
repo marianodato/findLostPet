@@ -17,6 +17,7 @@
         <datasource-map>
           <unit-entry name="Gorm" />
           <unit-entry name="hibernate.cfg.xml" />
+          <unit-entry name="sessionFactory" />
           <unit-entry name="target:work:plugins:hibernate-3.6.10.15:src:java:hibernate.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />
@@ -155,7 +156,6 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-gorm-hibernate/3.1.0.RELEASE/grails-datastore-gorm-hibernate-3.1.0.RELEASE.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/net/sf/ehcache/ehcache-core/2.4.8/ehcache-core-2.4.8.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-ehcache/3.6.10.Final/hibernate-ehcache-3.6.10.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6.jar!/" />
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.0/lib/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar!/" />
