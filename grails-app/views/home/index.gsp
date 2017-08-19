@@ -4,7 +4,7 @@
 <title>My Pets | Home</title>
 	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
 <!-- Custom Theme files -->
 	<link href="${resource(dir:'css', file:'style.css')}" rel='stylesheet' type='text/css' media='all' />
 <!-- Custom Theme files -->
@@ -17,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<script src="js/responsiveslides.min.js"></script>
+<script src="${resource(dir:'js', file:'responsiveslides.min.js')}"></script>
  <script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -28,8 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       });
     });
   </script>
-  <script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript" src="${resource(dir:'js', file:'move-top.js')}"></script>
+<script type="text/javascript" src="${resource(dir:'js', file:'easing.js')}"></script>
 </head>
 <style>
 	.submitLink {
@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header-bottom">
 			<div class="container">
 				<div class="logo">
-					<a href="${createLink(controller: 'home', action: 'index')}"><img src="images/logo.png" alt="" /></a>
+					<a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo.png')}" alt="" /></a>
 				</div>
 				<span class="menu"></span>
 				<div class="top-menu">
@@ -107,21 +107,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  <div class="callbacks_container">
 			  <ul class="rslides" id="slider">
 				 <li>
-					 <img src="images/3.jpg" alt=""/>
+					 <img src="${resource(dir:'images', file:'3.jpg')}" alt=""/>
 					  <div class="caption">
 						<h2>Until one has loved an animal a part of one's soul remains unawakened.</h2>
 						<a class="more" href="#">READ MORE</a>
 					  </div>
 				 </li>
 				 <li>
-					 <img src="images/2.jpg" alt=""/>
+					 <img src="${resource(dir:'images', file:'2.jpg')}" alt=""/>
 					  <div class="caption">
 						<h2>A dog is the only thing on earth that loves you more than you love yourself.</h2>
 						<a class="more" href="#">READ MORE</a>
 					  </div>
 				 </li>
 				 <li>
-					 <img src="images/1.jpg" alt=""/>
+					 <img src="${resource(dir:'images', file:'1.jpg')}" alt=""/>
 					  <div class="caption">
 						<h2>Money can buy you a fine dog, but only love can make him wag his tail.</h2>
 						<a class="more" href="#">READ MORE</a>
@@ -144,10 +144,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-6 images">
 						<div class="img1">
-							<img src="images/a1.jpg" class="img-responsive" alt="" />
+							<img src="${resource(dir:'images', file:'a1.jpg')}" class="img-responsive" alt="" />
 						</div>
 						<div class="img2">
-						<img src="images/a2.jpg" class="img-responsive" alt="" />
+						<img src="${resource(dir:'images', file:'a2.jpg')}" class="img-responsive" alt="" />
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="textimonials-section text-center">
 				<div class="container">
-					<img src="images/t.png" alt="" />
+					<img src="${resource(dir:'images', file:'t.png')}" alt="" />
 					<h5>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram</h5>
 					<p>Duis autem vel eum iriure dolor</p>
 					<a href="" class="btn btn-1 btn-1d">Read Testimonials</a>

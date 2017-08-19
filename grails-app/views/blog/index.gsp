@@ -2,11 +2,11 @@
 <html>
 <head>
 <title>My Pets | Blog</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+	<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="${resource(dir:'css', file:'style.css')}" rel='stylesheet' type='text/css' media='all' />
 <!-- Custom Theme files -->
 <!-- navigation -->
 <!-- navigation -->
@@ -17,7 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<script src="js/responsiveslides.min.js"></script>
+	<script src="${resource(dir:'js', file:'responsiveslides.min.js')}"></script>
  <script>
     $(function () {
       $("#slider").responsiveSlides({
@@ -28,8 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       });
     });
   </script>
-  <script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="${resource(dir:'js', file:'move-top.js')}"></script>
+	<script type="text/javascript" src="${resource(dir:'js', file:'easing.js')}"></script>
 </head>
 <style>
 .submitLink {
@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header-bottom">
 			<div class="container">
 				<div class="logo">
-					<a href="${createLink(controller: 'home', action: 'index')}"><img src="images/logo.png" alt="" /></a>
+					<a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo.png')}" alt="" /></a>
 				</div>
 				<span class="menu"></span>
 				<div class="top-menu">
@@ -114,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="section group example">			
 							<div class="col blog_1_of_2">
 				                <div class="blog_img">
-				                	<img src="images/about-img2.jpg" alt="">
+				                	<img src="${resource(dir:'images', file:'about-img2.jpg')}" alt="">
 				                </div>
 							</div>
 								<div class="col blogdata_1_of_2">								
@@ -163,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h4>COMMENTS</h4>
 			  				<div class="comments-main">
 									<div class="col-md-2 cmts-main-left">
-										<img src="images/avatar.png" alt="">
+										<img src="${resource(dir:'images', file:'avatar.png')}" alt="">
 									</div>
 									<div class="col-md-10 cmts-main-right">
 										<h5>TOM BROWN</h5>
@@ -182,7 +182,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="comments-main">
 									<div class="col-md-2 cmts-main-left">
-										<img src="images/avatar.png" alt="">
+										<img src="${resource(dir:'images', file:'avatar.png')}" alt="">
 									</div>
 									<div class="col-md-10 cmts-main-right">
 										<h5>MARK JOHNSON</h5>

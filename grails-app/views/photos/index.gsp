@@ -2,11 +2,11 @@
 <html>
 <head>
 <title>My Pets | Photos</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+	<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="${resource(dir:'css', file:'style.css')}" rel='stylesheet' type='text/css' media='all' />
 <!-- Custom Theme files -->
 <!-- navigation -->
 <!-- navigation -->
@@ -17,8 +17,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="js/jquery.fancybox.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+	<script type="text/javascript" src="${resource(dir:'js', file:'jquery.fancybox.js')}"></script>
+	<link href="${resource(dir:'css', file:'jquery.fancybox.css')}" rel='stylesheet' type='text/css' media='screen' />
    <script type="text/javascript">
 		$(document).ready(function() {
 			/*
@@ -29,9 +29,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		});
 	</script>
-	
-  <script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+
+	<script type="text/javascript" src="${resource(dir:'js', file:'move-top.js')}"></script>
+	<script type="text/javascript" src="${resource(dir:'js', file:'easing.js')}"></script>
 </head>
 <style>
 .submitLink {
@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header-bottom">
 			<div class="container">
 				<div class="logo">
-					<a href="${createLink(controller: 'home', action: 'index')}"><img src="images/logo.png" alt="" /></a>
+					<a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo.png')}" alt="" /></a>
 				</div>
 				<span class="menu"></span>
 				<div class="top-menu">
@@ -112,59 +112,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img1.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img1.jpg" class="img-style row6" alt=""><span> </span></a>
+					 <a class="fancybox" href="${resource(dir:'images', file:'gallery-img1.jpg')}" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="${resource(dir:'images', file:'gallery-img1.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img2.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img2.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img2.jpg')}" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="${resource(dir:'images', file:'gallery-img2.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img3.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img3.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img3.jpg"')} data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="${resource(dir:'images', file:'gallery-img3.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img4.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img4.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'images/gallery-img4.jpg')}" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="${resource(dir:'images', file:'gallery-img4.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 			</div> 	
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img5.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img5.jpg" class="img-style row6" alt=""><span> </span></a>
+					 <a class="fancybox" href="${resource(dir:'images', file:'images/gallery-img5.jpg')}" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="${resource(dir:'images', file:'gallery-img5.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img6.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img6.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'images/gallery-img6.jpg')}" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="${resource(dir:'images', file:'gallery-img6.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img7.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img7.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'images/gallery-img7.jpg')}" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="${resource(dir:'images', file:'gallery-img7.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img8.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img8.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'images/gallery-img8.jpg')}" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="${resource(dir:'images', file:'gallery-img8.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 			</div>
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img1.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img1.jpg" class="img-style row6" alt=""><span> </span></a>
+					 <a class="fancybox" href="${resource(dir:'images', file:'gallery-img1.jpg')}" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="${resource(dir:'images', file:'gallery-img1.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img2.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img2.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img2.jpg')}" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="${resource(dir:'images', file:'gallery-img2.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img3.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img3.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img3.jpg')}" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="${resource(dir:'images', file:'gallery-img3.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img4.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img4.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img4.jpg')}" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="${resource(dir:'images', file:'gallery-img4.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 			</div> 				
 			
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					 <a class="fancybox" href="images/gallery-img5.jpg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/gallery-img5.jpg" class="img-style row6" alt=""><span> </span></a>
+					 <a class="fancybox" href="${resource(dir:'images', file:'gallery-img5.jpg')}" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="${resource(dir:'images', file:'gallery-img5.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img9.jpg" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="images/gallery-img9.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img9.jpg')}" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="${resource(dir:'images', file:'gallery-img9.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img7.jpg" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="images/gallery-img7.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img7.jpg')}" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="${resource(dir:'images', file:'gallery-img7.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					  <a class="fancybox" href="images/gallery-img1.jpg" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="images/gallery-img1.jpg" class="img-style row6" alt=""><span> </span></a>
+					  <a class="fancybox" href="${resource(dir:'images', file:'gallery-img1.jpg')}" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="${resource(dir:'images', file:'gallery-img1.jpg')}" class="img-style row6" alt=""><span> </span></a>
 				</div>
 			</div> 	
    </div>
