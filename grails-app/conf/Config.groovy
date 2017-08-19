@@ -99,49 +99,24 @@ environments {
 
 // log4j configuration
 log4j = {
-    appenders {
-        def rollingAppender = new RollingFileAppender(
-                name: "rollingAppender",
-                layout: pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p - [x-request-id:%X{xRequestId}] [%c{2}] %m%n'),
-                file: "/tmp/logs/catalina.out",
-                bufferSize: 2048,
-                bufferedIO: false,
-                maxFileSize: "100MB"
-        )
-        appender rollingAppender
-    }
 
-    info additivity: false, rollingAppender: "grails.app.controllers"
-    info additivity: false, rollingAppender: "grails.app.services"
-    info additivity: false, rollingAppender: "grails.app.jobs"
-
-    environments {
-        production {
-            appenders {
-                def rollingAppender = new RollingFileAppender(
-                        name: "rollingAppender",
-                        layout: pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p - [x-request-id:%X{xRequestId}] [%c{2}] %m%n'),
-                        file: "/home/oraweb/tomcat/logs/catalina.out",
-                        bufferSize: 2048,
-                        bufferedIO: false,
-                        maxFileSize: "100MB"
-                )
-                appender rollingAppender
-            }
-
-            info additivity: false, rollingAppender: "grails.app.controllers"
-            info additivity: false, rollingAppender: "grails.app.services"
-            info additivity: false, rollingAppender: "grails.app.jobs"
-        }
-        development {
-            debug additivity: false, stdout: "grails.app.controllers"
-            debug additivity: false, stdout: "grails.app.services"
-            debug additivity: false, stdout: "grails.app.jobs"
-        }
-        test {
-            debug stdout: "grails.app.controllers"
-            debug stdout: "grails.app.services"
-            debug stdout: "grails.app.jobs"
-        }
-    }
+    info stdout: "org.codehaus.groovy.grails.web.servlet"
+    info stdout: "org.codehaus.groovy.grails.web.pages"
+    info stdout: "org.codehaus.groovy.grails.web.sitemesh"
+    info stdout: "org.codehaus.groovy.grails.web.mapping.filter"
+    info stdout: "org.codehaus.groovy.grails.web.mapping"
+    info stdout: "org.codehaus.groovy.grails.commons"
+    info stdout: "org.codehaus.groovy.grails.plugins"
+    info stdout: "org.codehaus.groovy.grails.orm.hibernate"
+    info stdout: "org.springframework"
+    info stdout: "org.hibernate"
+    info stdout: "net.sf.ehcache.hibernate"
+    info stdout: "grails.app.controllers"
+    info stdout: "grails.app.services"
+    info stdout: "grails.app.filters"
+    info stdout: "grails.app.jobs"
+    debug stdout: "grails.app.controllers"
+    debug stdout: "grails.app.services"
+    debug stdout: "grails.app.filters"
+    debug stdout: "grails.app.jobs"
 }
