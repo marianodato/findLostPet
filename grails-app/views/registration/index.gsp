@@ -143,12 +143,10 @@ h1{
 }
 
 .login_div {
-    position: absolute;
+    position: relative;
     /* Center form on page horizontally & vertically */
-    top: 50%;
-    left: 50%;
-    margin-top: -150px;
-    margin-left: -150px;
+    margin-top: 5%;
+    margin-left: 0%;
 }
 
 .login_form {
@@ -206,36 +204,31 @@ h1{
     </div>
 </div>
 <!-- header-section-ends -->
-<div class="login_div">
-    <form class="login_form" method="post" action="registration">
-        <div class="box">
-            <h1>Join</h1>
-
-            <g:if test="${message}">
-                <div name="message" id="message" class="message">${message}</div>
-            </g:if>
-
-            <input type="text" name="username" value="Username" pattern='(?=^.{6,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$' title="Format: Only one special char (._-) allowed and it must not be at the extremas of the string. The first character cannot be a number. All the other characters allowed are letters and numbers. The total length should be between 6 and 20 chars" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
-
-            <input type="password" name="password" value="Password" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!#%*?&])[A-Za-z\d$@$!#%*?&]{8,}' title="Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
-
-            <input type="email" name="email" value="Email" onFocus="field_focus(this, 'Email');" onblur="field_blur(this, 'Email');" class="username" />
-
-            <input type="text" name="name" value="Complete Name" onFocus="field_focus(this, 'Complete Name');" onblur="field_blur(this, 'Complete Name');" class="username" />
-
-            <input type='tel' name="phone_number" value="Phone Number" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title="Format: +99(99)9999-9999" onFocus="field_focus(this, 'Phone Number');" onblur="field_blur(this, 'Phone Number');" class="username">
-
-            <div style="text-align:left;padding-top: 10px;padding-left: 20px">
-                <input type="radio" name="gender" value="male" checked > Male<br>
-                <input type="radio" name="gender" value="female" > Female<br>
+<div class="slider">
+    <div class="callbacks_container">
+        <div class="rslides" id="slider">
+            <div class="login_div">
+                <form class="login_form" method="post" action="registration">
+                    <div class="box">
+                        <h1>Join</h1>
+                        <g:if test="${message}">
+                            <div name="message" id="message" class="message">${message}</div>
+                        </g:if>
+                        <input type="text" name="username" value="Username" pattern='(?=^.{6,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$' title="Format: Only one special char (._-) allowed and it must not be at the extremas of the string. The first character cannot be a number. All the other characters allowed are letters and numbers. The total length should be between 6 and 20 chars" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
+                        <input type="password" name="password" value="Password" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!#%*?&])[A-Za-z\d$@$!#%*?&]{8,}' title="Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
+                        <input type="email" name="email" value="Email" onFocus="field_focus(this, 'Email');" onblur="field_blur(this, 'Email');" class="username" />
+                        <input type="text" name="name" value="Complete Name" onFocus="field_focus(this, 'Complete Name');" onblur="field_blur(this, 'Complete Name');" class="username" />
+                        <input type='tel' name="phone_number" value="Phone Number" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title="Format: +99(99)9999-9999" onFocus="field_focus(this, 'Phone Number');" onblur="field_blur(this, 'Phone Number');" class="username">
+                        <div style="text-align:left;padding-top: 10px;padding-left: 20px">
+                            <input type="radio" name="gender" value="male" checked > Male<br>
+                            <input type="radio" name="gender" value="female" > Female<br>
+                        </div>
+                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
+                    </div> <!-- End Box -->
+                </form>
             </div>
-
-            <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
-
-        </div> <!-- End Box -->
-
-    </form>
-
+        </div>
+    </div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>

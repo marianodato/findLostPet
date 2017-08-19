@@ -143,12 +143,10 @@ h1{
 }
 
 .login_div {
-    position: absolute;
+    position: relative;
     /* Center form on page horizontally & vertically */
-    top: 60%;
-    left: 50%;
-    margin-top: -150px;
-    margin-left: -150px;
+    margin-top: 10%;
+    margin-left: 0%;
 }
 
 .login_form {
@@ -206,30 +204,27 @@ h1{
     </div>
 </div>
 <!-- header-section-ends -->
-    <div class="login_div">
-        <form class="login_form" method="post" action="login">
-            <div class="box">
-                <h1>Welcome</h1>
-
-                <g:if test="${message}">
-                    <div name="message" id="message" class="message">${message}</div>
-                </g:if>
-
-                <input type="text" name="username" value="Username" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
-
-                <input type="password" name="password" value="Password" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
-
-                <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Sign In"/> <!-- End Btn -->
-
-                <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
-
-            </div> <!-- End Box -->
-
-        </form>
-
-        <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
-
+<div class="slider">
+    <div class="callbacks_container">
+        <div class="rslides" id="slider">
+            <div class="login_div">
+                <form class="login_form" method="post" action="login">
+                    <div class="box">
+                        <h1>Welcome</h1>
+                        <g:if test="${message}">
+                            <div name="message" id="message" class="message">${message}</div>
+                        </g:if>
+                        <input type="text" name="username" value="Username" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
+                        <input type="password" name="password" value="Password" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
+                        <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Sign In"/> <!-- End Btn -->
+                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
+                    </div> <!-- End Box -->
+                </form>
+                <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
+            </div>
+        </div>
     </div>
+</div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
     <script>
