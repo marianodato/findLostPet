@@ -4,13 +4,13 @@ import grails.test.spock.IntegrationSpec
 import org.apache.log4j.Level
 import org.apache.log4j.LogManager
 import spock.lang.Shared
-import webserver.AboutController
+import webserver.InfoController
 import webserver.User
 
-class AboutControllerIntegrationSpec extends IntegrationSpec {
+class InfoControllerIntegrationSpec extends IntegrationSpec {
 
     @Shared
-    AboutController controller = new AboutController()
+    InfoController controller = new InfoController()
 
     void setup() {
         org.apache.log4j.BasicConfigurator.configure();

@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 					<nav class="cl-effect-5">
 						<li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
-						<li><a href="${createLink(controller: 'about', action: 'index')}">About</a></li>
+						<li><a href="${createLink(controller: 'info', action: 'index')}">Info</a></li>
 						<li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
 						<li><a class="active" href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
 						<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>

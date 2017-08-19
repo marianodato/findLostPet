@@ -12,8 +12,8 @@ class UrlMappings {
             action = [GET: "index"]
         }
 
-        "/about"{
-            controller = "about"
+        "/info"{
+            controller = "info"
             action = [GET: "index"]
         }
 

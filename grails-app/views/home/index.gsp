@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 					<nav class="cl-effect-5">
 						<li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
-						<li><a href="${createLink(controller: 'about', action: 'index')}">About</a></li>
+						<li><a href="${createLink(controller: 'info', action: 'index')}">Info</a></li>
 						<li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
 						<li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
 						<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
@@ -166,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
 					</div>
 					<div class="clearfix"></div>
-					<a href="${createLink(controller: 'about', action: 'index')}" class="btn btn-1 btn-1c">read more</a>
+					<a href="${createLink(controller: 'info', action: 'index')}" class="btn btn-1 btn-1c">read more</a>
 				</div>
 			</div>
 			<div class="textimonials-section text-center">

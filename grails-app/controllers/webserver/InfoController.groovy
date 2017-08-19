@@ -1,6 +1,6 @@
 package webserver
 
-class AboutController {
+class InfoController {
 
     def sessionService
 
@@ -15,7 +15,7 @@ class AboutController {
         else
             model.logged = true
 
-        render (view:"/about/index",model:model)
+        render (view:"/info/index",model:model)
         return
     }
 }
