@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
 </head>
 
 <style>
@@ -304,8 +304,8 @@
 
     <!-- END CONTACT -->
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="http://www.glennsmith.me/wp-content/themes/myTheme/js/jquery-smooth-slide.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://www.glennsmith.me/wp-content/themes/myTheme/js/jquery-smooth-slide.js"></script>
 
     <script>
         //Sticky navigation bar
