@@ -33,10 +33,13 @@ environments {
     }
     production {
         dataSource {
+
+            URI jdbUri = new URI(System.getenv("JAWSDB_URL"))
             driverClassName = "com.mysql.jdbc.Driver"
-            username = "root"
-            password = "root"
-            url = "jdbc:mysql://127.0.0.1:3306/findMyPet"
+            username = jdbUri.getUserInfo().split(":")[0]
+            password = jdbUri.getUserInfo().split(":")[1]
+            port = String.valueOf(jdbUri.getPort())
+            url = "jdbc:mysql://" + jdbUri.getHost() + ":" + port + jdbUri.getPath()
 
             properties {
                 testOnBorrow = false // en true puede tener impacto en la performance
