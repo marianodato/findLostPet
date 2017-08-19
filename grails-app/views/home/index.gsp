@@ -2,11 +2,11 @@
 <html>
 <head>
 <title>My Pets | Home</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="${resource(dir:'css', file:'style.css')}" rel='stylesheet' type='text/css' media='all' />
 <!-- Custom Theme files -->
 <!-- navigation -->
 <!-- navigation -->
