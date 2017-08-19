@@ -37,18 +37,18 @@ class UrlMappings {
             action = [GET: "index"]
         }
 
-        "/care"{
-            controller = "care"
-            action = [GET: "index"]
-        }
-
         "/login"{
             controller = "login"
             action = [GET:"index", POST: "login"]
         }
 
+        "/registration"{
+            controller = "registration"
+            action = [GET:"index", POST: "registration"]
+        }
+
         "/logout"{
-            controller = "home"
+            controller = "login"
             action = [POST: "logout"]
         }
 

@@ -1,30 +1,43 @@
 package webserver
 
-import grails.converters.JSON
+import org.codehaus.groovy.grails.web.errors.GrailsWrappedRuntimeException
 
 class ErrorController {
 
+    def sessionService
+
     def handleError() {
-        def resp = [:]
-        resp.message = "Oops! Something went wrong..."
-        resp.error = "internal_error"
-        resp.status = 500
-        resp.cause = []
-        log.error("500 " + resp.message)
-        response.status = resp.status
-        render resp as JSON
+
+        def exception = request.exception
+
+        if (exception instanceof GrailsWrappedRuntimeException) {
+            while (exception instanceof GrailsWrappedRuntimeException) {
+                exception = exception.cause
+            }
+        }
+
+        log.error("500 " + exception.message)
+        log.error("Cause: " + exception.cause)
+
+        response.status = 500
+        render (view:"/error/index", model:[exception:exception])
         return
     }
 
     def notFound() {
-        def resp = [:]
-        resp.message = "Resource $request.forwardURI not found."
-        resp.error = "not_found"
-        resp.status = 404
-        resp.cause = []
-        log.error("404 " + resp.message)
-        response.status = resp.status
-        render resp as JSON
+
+        def user_id = sessionService.getUserId(session.token)
+        log.info("User_id: " + user_id)
+        def model = [:]
+
+        if (!user_id)
+            model.logged = false
+        else
+            model.logged = true
+
+        log.error("404")
+        response.status = 404
+        render (view:"/error/not_found", model:model)
         return
     }
 }

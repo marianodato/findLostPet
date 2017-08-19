@@ -3,25 +3,23 @@ package webserver
 class SessionService {
 
     static transactional = false
+    def utilsService
 
     def generateSessionId(Long user_id) {
 
         def resp = [:]
-        def userSession = UserSession.findByUser_id(user_id)
+        def user = User.findById(user_id)
 
-        log.info("UserSession: " + userSession)
+        log.info("User: " + user)
 
-        if (!userSession)
-            userSession = new UserSession (user_id:user_id)
+        user.sessionToken = PasswordHash.createRandomSaltString()
 
-        userSession.session_token = PasswordHash.createRandomSaltString()
+        log.info("Session_token: " + user.sessionToken)
 
-        log.info("Session_token: " + userSession.session_token)
-
-        if (!saveInstance(userSession)){
-            userSession.discard()
-            userSession.errors.each {
-                log.error("Error: Error saving to UserSession table: " + it + " .UserSession: " + userSession)
+        if (!utilsService.saveInstance(user)){
+            user.discard()
+            user.errors.each {
+                log.error("Error: Error saving to UserSession table: " + it + " .UserSession: " + user)
             }
             resp.message = "Oops! Something went wrong..."
             resp.status = 500
@@ -30,28 +28,23 @@ class SessionService {
 
         log.info("Session created!")
         resp.status = 201
-        resp.session_token = userSession.session_token
+        resp.session_token = user.sessionToken
 
         return resp
     }
 
-    def getUserId(def session_token){
+    def getUserId(def sessionToken){
 
-        log.info("Session_token: " + session_token)
+        log.info("Session_token: " + sessionToken)
 
-        if (!session_token)
+        if (!sessionToken)
             return null
 
-        def userSession = UserSession.findBySession_token(session_token)
+        def user = User.findBySessionToken(sessionToken)
 
-        if (!userSession)
+        if (!user)
             return null
 
-        return userSession.user_id
+        return user.id
     }
-
-    def saveInstance(def instance){
-        return instance.save(flush: true)
-    }
-
 }

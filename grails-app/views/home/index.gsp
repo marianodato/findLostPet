@@ -69,13 +69,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
 						<li><a href="${createLink(controller: 'about', action: 'index')}">About</a></li>
 						<li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
-						<li><a href="${createLink(controller: 'care', action: 'index')}">Care</a></li>
+						<li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
 						<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
 						<!--<li><a href="${createLink(controller: 'contact', action: 'index')}"><span data-hover="Contact">Contact</span></a></li>-->
 						<g:if test="${logged == true}">
 						<li>
 							<a>
-								<form method="post" controller="home" action="logout">
+								<form method="post" controller="login" action="logout">
 									<input type="submit" class="submitLink" value="LOG OUT"/>
 								</form>
 							</a>

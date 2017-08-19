@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Pets | Login</title>
+    <title>My Pets | Registration</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -104,7 +104,7 @@ h1{
 
 .btn3{
     float:left;
-    background: #27ae60;
+    background:#27ae60;
     width:125px;  padding-top:5px;
     padding-bottom:5px;
     color:white;
@@ -113,13 +113,13 @@ h1{
 
     margin-top:20px;
     margin-bottom:20px;
-    margin-left:10px;
+    margin-left:85px;
     font-weight:800;
     font-size:0.8em;
 }
 
 .btn3:hover{
-    background: #2ecc71;
+    background:#2ecc71;
 }
 
 .btn2{
@@ -145,7 +145,7 @@ h1{
 .login_div {
     position: absolute;
     /* Center form on page horizontally & vertically */
-    top: 60%;
+    top: 50%;
     left: 50%;
     margin-top: -150px;
     margin-left: -150px;
@@ -159,7 +159,7 @@ h1{
 
 .message {
     font-size:1.0em;
-    color: #ff0000;
+    color:#ff0000;
 }
 
 </style>
@@ -187,8 +187,8 @@ h1{
                         <li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
                         <li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
                         <li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
-                    <!--<li><a href="${createLink(controller: 'contact', action: 'index')}"><span data-hover="Contact">Contact</span></a></li>-->
-                            <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+                        <!--<li><a href="${createLink(controller: 'contact', action: 'index')}"><span data-hover="Contact">Contact</span></a></li>-->
+                        <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
                     </nav>
                 </ul>
             </div>
@@ -206,59 +206,66 @@ h1{
     </div>
 </div>
 <!-- header-section-ends -->
-    <div class="login_div">
-        <form class="login_form" method="post" action="login">
-            <div class="box">
-                <h1>Welcome</h1>
+<div class="login_div">
+    <form class="login_form" method="post" action="registration">
+        <div class="box">
+            <h1>Join</h1>
 
-                <g:if test="${message}">
-                    <div name="message" id="message" class="message">${message}</div>
-                </g:if>
+            <g:if test="${message}">
+                <div name="message" id="message" class="message">${message}</div>
+            </g:if>
 
-                <input type="text" name="username" value="Username" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
+            <input type="text" name="username" value="Username" pattern='(?=^.{6,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$' title="Format: Only one special char (._-) allowed and it must not be at the extremas of the string. The first character cannot be a number. All the other characters allowed are letters and numbers. The total length should be between 6 and 20 chars" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
 
-                <input type="password" name="password" value="Password" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
+            <input type="password" name="password" value="Password" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!#%*?&])[A-Za-z\d$@$!#%*?&]{8,}' title="Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
 
-                <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Sign In"/> <!-- End Btn -->
+            <input type="email" name="email" value="Email" onFocus="field_focus(this, 'Email');" onblur="field_blur(this, 'Email');" class="username" />
 
-                <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
+            <input type="text" name="name" value="Complete Name" onFocus="field_focus(this, 'Complete Name');" onblur="field_blur(this, 'Complete Name');" class="username" />
 
-            </div> <!-- End Box -->
+            <input type='tel' name="phone_number" value="Phone Number" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title="Format: +99(99)9999-9999" onFocus="field_focus(this, 'Phone Number');" onblur="field_blur(this, 'Phone Number');" class="username">
 
-        </form>
+            <div style="text-align:left;padding-top: 10px;padding-left: 20px">
+                <input type="radio" name="gender" value="male" checked > Male<br>
+                <input type="radio" name="gender" value="female" > Female<br>
+            </div>
 
-        <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
+            <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
 
-    </div>
+        </div> <!-- End Box -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
-    <script>
-        function field_focus(field, username)
+    </form>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+<script>
+    function field_focus(field, username)
+    {
+        if(field.value == username)
         {
-            if(field.value == username)
-            {
-                field.value = '';
-            }
+            field.value = '';
         }
+    }
 
-        function field_blur(field, username)
+    function field_blur(field, username)
+    {
+        if(field.value == '')
         {
-            if(field.value == '')
-            {
-                field.value = username;
-            }
+            field.value = username;
         }
+    }
 
-        //Fade in welcome box
-        $(document).ready(function(){
-            $('.box').hide().fadeIn(1000);
-        });
+    //Fade in welcome box
+    $(document).ready(function(){
+        $('.box').hide().fadeIn(1000);
+    });
 
-        //Stop click event
-        /*$('a').click(function(event){
-            event.preventDefault();
-        });*/
+    //Stop click event
+    /*$('a').click(function(event){
+     event.preventDefault();
+     });*/
 
-    </script>
-    </body>
+</script>
+</body>
 </html>

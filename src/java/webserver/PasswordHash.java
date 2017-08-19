@@ -44,7 +44,7 @@ public class PasswordHash {
         byte[] salt = createRandomSalt();
         // Hash the password
         byte[] hash = pbkdf2(password, salt, PBKDF2_ITERATIONS, HASH_BYTES);
-        // format iterations:salt:hash
+        // Format iterations:salt:hash
         return PBKDF2_ITERATIONS + ":" + toHex(salt) + ":" +  toHex(hash);
     }
 

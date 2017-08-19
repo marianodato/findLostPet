@@ -1,8 +1,8 @@
 package webserver
 
-class LoginController {
+class RegistrationController {
 
-    def loginService
+    def registrationService
     def sessionService
 
     def index() {
@@ -15,11 +15,11 @@ class LoginController {
             return
         }
 
-        render (view:"/login/index")
+        render (view:"/registration/index")
         return
     }
 
-    def login(){
+    def registration(){
         def user_id = sessionService.getUserId(session.token)
         log.info("User_id: " + user_id)
         def resp = [:]
@@ -31,29 +31,15 @@ class LoginController {
 
         log.info("Params: " + params)
 
-        if(params.sign_up){
-
-            redirect(controller: "registration", action: "index")
-            return
-
-        }
-
-        resp = loginService.doLogin(params.username, params.password)
+        resp = registrationService.doRegister(params.username, params.password, params.email, params.name, params.phone_number, params.gender)
 
         if (resp.status == 201) {
-            //Default session time: 30 minutes
-            session.token = resp.session_token
-            redirect(controller: "home", action: "index")
+            redirect(controller: "login", action: "index")
             return
         }
 
-        render (view:"/login/index", model:[message:resp.message])
+        render (view:"/registration/index", model:[message:resp.message])
         return
-    }
 
-    def logout(){
-        session.invalidate()
-        redirect(controller: "home", action: "index")
-        return
     }
 }
