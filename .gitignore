@@ -44,3 +44,5 @@
 # Cache
 *.slcache
 
+# Environment variables
+*.env
