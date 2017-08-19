@@ -3,9 +3,10 @@ package webserver
 class Pet {
 
     String nickname
-    char gender
+    String gender
     String description
     Date dateCreated
+    Date lastUpdated
     byte[] image
     static belongsTo = [user: User, petColor: PetColor, petType: PetType, petSize: PetSize, petRace: PetRace]
     static hasMany = [notifications: Notification]
@@ -24,6 +25,7 @@ class Pet {
         gender blank:false, nullable: false
         description blank:false, nullable: true
         dateCreated blank:false, nullable: false
+        lastUpdated blank:false, nullable: false
         image blank:false, nullable: true
         latitude blank:false, nullable: false
         longitude blank:false, nullable: false
