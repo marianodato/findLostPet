@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Pets | About</title>
+    <title>My Pets | Info</title>
     <link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -102,12 +102,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- header-section-ends -->
 <!-- content-section-starts -->
 <div class="content">
-    <!--about-->
+    <!--info-->
     <div class="main">
         <div class="container">
             <div class="about-top">
                 <div class="about-top-info">
-                    <h3>About</h3>
+                    <h3>Info</h3>
                     <div class="col-md-4 about-img">
                         <img src="${resource(dir:'images', file:'pic8.jpg')}" alt=""/>
                     </div>
@@ -212,7 +212,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-<!--/about-->
+<!--/info-->
 </div>
 <!-- content-section-ends -->
 <!-- footer-section-starts -->
