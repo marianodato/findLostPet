@@ -26,14 +26,16 @@ class ErrorController {
 
     def notFound() {
 
-        def user_id = sessionService.getUserId(session.token)
-        log.info("User_id: " + user_id)
+        def user = sessionService.getUser(session.token)
         def model = [:]
 
-        if (!user_id)
+        if (!user) {
             model.logged = false
-        else
+        } else {
+            log.info("User_id: " + user.id)
             model.logged = true
+            model.username = user.username
+        }
 
         log.error("404")
         response.status = 404

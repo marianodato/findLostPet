@@ -7,10 +7,10 @@ class LoginController {
 
     def index() {
 
-        def user_id = sessionService.getUserId(session.token)
-        log.info("User_id: " + user_id)
+        def user = sessionService.getUser(session.token)
 
-        if (user_id){
+        if (user){
+            log.info("User_id: " + user.id)
             redirect(controller: "home", action: "index")
             return
         }
@@ -20,11 +20,11 @@ class LoginController {
     }
 
     def login(){
-        def user_id = sessionService.getUserId(session.token)
-        log.info("User_id: " + user_id)
+        def user = sessionService.getUser(session.token)
         def resp = [:]
 
-        if (user_id){
+        if (user){
+            log.info("User_id: " + user.id)
             redirect(controller: "home", action: "index")
             return
         }

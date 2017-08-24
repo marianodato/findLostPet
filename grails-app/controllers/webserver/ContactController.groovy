@@ -6,16 +6,19 @@ class ContactController {
 
     def index(){
 
-        def user_id = sessionService.getUserId(session.token)
-        log.info("User_id: " + user_id)
+        def user = sessionService.getUser(session.token)
+
+        if (!user) {
+            redirect(controller: "login", action: "index")
+            return
+        }
+
+        log.info("User_id: " + user.id)
+
         def model = [:]
+        model.username = user.username
 
-        if (!user_id)
-            model.logged = false
-        else
-            model.logged = true
-
-        render (view:"/contact/index",model:model)
+        render (view:"/contact/index", model:model)
         return
     }
 }

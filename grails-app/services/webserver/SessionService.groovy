@@ -33,7 +33,7 @@ class SessionService {
         return resp
     }
 
-    def getUserId(def sessionToken){
+    def getUser(def sessionToken){
 
         log.info("Session_token: " + sessionToken)
 
@@ -45,6 +45,6 @@ class SessionService {
         if (!user)
             return null
 
-        return user.id
+        return user
     }
 }

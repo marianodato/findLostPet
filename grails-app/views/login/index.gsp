@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Pets | Login</title>
+    <title>Find Lost Pet | Login</title>
     <link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -166,27 +166,24 @@ h1{
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <p class="location"><i class="location"></i>18A, Polo Street (Yellow Door)</p>
-            <p class="phonenum">+ 655 8858 2068 54892</p>
+            <p class="location"><i class="location"></i>University of Belgrano</p>
+            <p class="phonenum">
+                <img src="${resource(dir:'images', file:'user.png')}" alt="" /> Not logged in
+            </p>
             <div class="clearfix"></div>
         </div>
     </div>
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo.png')}" alt="" /></a>
+                <a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
             </div>
             <span class="menu"></span>
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
                         <li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
-                        <li><a href="${createLink(controller: 'info', action: 'index')}">Info</a></li>
-                        <li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
-                        <li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
-                        <li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
-                    <!--<li><a href="${createLink(controller: 'contact', action: 'index')}"><span data-hover="Contact">Contact</span></a></li>-->
-                            <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+                        <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
                     </nav>
                 </ul>
             </div>

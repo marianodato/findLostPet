@@ -6,14 +6,16 @@ class HomeController {
 
     def index(){
 
-        def user_id = sessionService.getUserId(session.token)
-        log.info("User_id: " + user_id)
+        def user = sessionService.getUser(session.token)
         def model = [:]
 
-        if (!user_id)
+        if (!user) {
             model.logged = false
-        else
+        } else {
+            log.info("User_id: " + user.id)
             model.logged = true
+            model.username = user.username
+        }
 
         render (view:"/home/index", model:model)
         return

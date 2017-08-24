@@ -33,13 +33,13 @@ class BlogControllerIntegrationSpec extends IntegrationSpec {
         User.deleteAll(User.list())
     }
 
-    void "test index ok"(){
+    void "test index user not logged in"(){
         given:
         controller.request.method = 'GET'
         controller.session.token = null
         when:
         controller.index()
         then:
-        controller.response.status == 200
+        controller.response.status == 302
     }
 }
