@@ -22,7 +22,7 @@ environments {
             driverClassName = "com.mysql.jdbc.Driver"
             username = "root"
             password = "root"
-            url = "jdbc:mysql://127.0.0.1:3306/findMyPet"
+            url = "jdbc:mysql://127.0.0.1:3306/findlostpet"
         }
     }
     test {
@@ -33,7 +33,8 @@ environments {
     }
     production {
         dataSource {
-            dbCreate = "update"
+            //dbCreate = "update"
+            dbCreate = "create-drop"
             URI jdbUri = new URI(System.getenv("JAWSDB_URL"))
             driverClassName = "com.mysql.jdbc.Driver"
             username = jdbUri.getUserInfo().split(":")[0]

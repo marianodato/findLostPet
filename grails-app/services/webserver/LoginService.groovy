@@ -24,9 +24,6 @@ class LoginService {
 
             resp = sessionService.generateSessionId(user.id)
 
-            if (resp.status == 500)
-                return resp
-
             log.info("Login successful!")
             resp.message = "Login successful!"
             resp.status = 201

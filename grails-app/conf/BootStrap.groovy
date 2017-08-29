@@ -1,3 +1,7 @@
+import webserver.PetRace
+import webserver.PetSize
+import webserver.PetColor
+import webserver.PetType
 import webserver.User
 import grails.util.Environment
 
@@ -13,7 +17,105 @@ class BootStrap {
             {
                 user.discard()
                 user.errors.each {
-                    log.error("Error: Error saving to User table: " + it + " .User: " + user)
+                    log.error("Error: Error saving to User table: " + it + " . User: " + user)
+                }
+            }
+            PetColor petColor1 = new PetColor(description: "White")
+            petColor1.dateCreated = new Date()
+            if (!petColor1.save(flush: true))
+            {
+                petColor1.discard()
+                petColor1.errors.each {
+                    log.error("Error: Error saving to PetColor table: " + it + " . PetColor: " + petColor1)
+                }
+            }
+            PetColor petColor2 = new PetColor(description: "Black")
+            petColor2.dateCreated = new Date()
+            if (!petColor2.save(flush: true)) {
+                petColor2.discard()
+                petColor2.errors.each {
+                    log.error("Error: Error saving to PetColor table: " + it + " . PetColor: " + petColor2)
+                }
+            }
+            PetSize petSize1 = new PetSize(description: "Thin")
+            petSize1.dateCreated = new Date()
+            if (!petSize1.save(flush: true))
+            {
+                petSize1.discard()
+                petSize1.errors.each {
+                    log.error("Error: Error saving to PetSize table: " + it + " . PetSize: " + petSize1)
+                }
+            }
+            PetSize petSize2 = new PetSize(description: "Obese")
+            petSize2.dateCreated = new Date()
+            if (!petSize2.save(flush: true))
+            {
+                petSize2.discard()
+                petSize2.errors.each {
+                    log.error("Error: Error saving to PetSize table: " + it + " . PetSize: " + petSize2)
+                }
+            }
+            PetType petType1 = new PetType(description: "Dog")
+            petType1.dateCreated = new Date()
+            if (!petType1.save(flush: true))
+            {
+                petType1.discard()
+                petType1.errors.each {
+                    log.error("Error: Error saving to PetType table: " + it + " . PetType: " + petType1)
+                }
+            }
+            PetType petType2 = new PetType(description: "Cat")
+            petType2.dateCreated = new Date()
+            if (!petType2.save(flush: true))
+            {
+                petType2.discard()
+                petType2.errors.each {
+                    log.error("Error: Error saving to PetType table: " + it + " . PetType: " + petType2)
+                }
+            }
+            PetType petType3 = new PetType(description: "Fish")
+            petType3.dateCreated = new Date()
+            if (!petType3.save(flush: true))
+            {
+                petType3.discard()
+                petType3.errors.each {
+                    log.error("Error: Error saving to PetType table: " + it + " . PetType: " + petType3)
+                }
+            }
+            PetRace petRace1 = new PetRace(description: "Bulldog", petType:petType1)
+            petRace1.dateCreated = new Date()
+            if (!petRace1.save(flush: true))
+            {
+                petRace1.discard()
+                petRace1.errors.each {
+                    log.error("Error: Error saving to PetRace table: " + it + " . PetRace: " + petRace1)
+                }
+            }
+            PetRace petRace2 = new PetRace(description: "Pitbull", petType:petType1)
+            petRace2.dateCreated = new Date()
+            if (!petRace2.save(flush: true))
+            {
+                petRace2.discard()
+                petRace2.errors.each {
+                    log.error("Error: Error saving to PetRace table: " + it + " . PetRace: " + petRace2)
+                }
+            }
+            PetRace petRace3 = new PetRace(description: "Ragdoll", petType:petType2)
+            petRace3.dateCreated = new Date()
+            if (!petRace3.save(flush: true))
+            {
+                petRace3.discard()
+                petRace3.errors.each {
+                    log.error("Error: Error saving to PetRace table: " + it + " . PetRace: " + petRace3)
+                }
+            }
+            PetRace petRace4 = new PetRace(description: "Bombay", petType:petType2)
+            petRace4.dateCreated = new Date()
+            if (!petRace4.save(flush: true))
+            {
+                petRace4.discard()
+                petRace4.errors.each {
+                    log.error("Error: Error saving to PetRace table: " + it + " . PetRace: " + petRace4)
                 }
             }
         }

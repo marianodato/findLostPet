@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="header-top">
 			<div class="container">
-				<p class="location"><i class="location"></i>University of Belgrano</p>
+				<p class="location">University of Belgrano</p>
 				<p class="phonenum">
 					<img src="${resource(dir:'images', file:'user.png')}" alt="" /> ${username}
 				</p>
@@ -74,6 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a class="active" href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
 							<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
 							<li><a href="${createLink(controller: 'contact', action: 'index')}">Contact</a></li>
+							<li><a href="${createLink(controller: 'post', action: 'index')}">Post</a></li>
 							<li>
 								<a>
 									<form method="post" controller="login" action="logout">

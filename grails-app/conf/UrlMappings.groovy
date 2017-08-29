@@ -57,6 +57,11 @@ class UrlMappings {
             action = [GET: "index"]
         }
 
+        "/post" {
+            controller = "post"
+            action = [GET: "index", POST: "post"]
+        }
+
         "500"(controller: "error", action: "handleError")
         "/**"(controller: "error", action: "notFound")
     }

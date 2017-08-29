@@ -90,84 +90,6 @@ class RegistrationControllerIntegrationSpec extends IntegrationSpec {
         controller.session.token == null
     }
 
-    void "test registration insecure username"() {
-        given:
-        controller.request.method = 'POST'
-        controller.params.username = "short"
-        controller.params.password = "lololo"
-        controller.session.token = null
-        when:
-        controller.registration()
-        then:
-        controller.response.status == 200
-        controller.session.token == null
-    }
-
-    void "test registration insecure username 2"() {
-        given:
-        controller.request.method = 'POST'
-        controller.params.username = "sh1rt__"
-        controller.params.password = "lololo"
-        controller.session.token = null
-        when:
-        controller.registration()
-        then:
-        controller.response.status == 200
-        controller.session.token == null
-    }
-
-    void "test registration insecure username 3"() {
-        given:
-        controller.request.method = 'POST'
-        controller.params.username = "1sh1rt2"
-        controller.params.password = "lololo"
-        controller.session.token = null
-        when:
-        controller.registration()
-        then:
-        controller.response.status == 200
-        controller.session.token == null
-    }
-
-    void "test registration insecure password 1"() {
-        given:
-        controller.request.method = 'POST'
-        controller.params.username = "Pepepe"
-        controller.params.password = "short"
-        controller.session.token = null
-        when:
-        controller.registration()
-        then:
-        controller.response.status == 200
-        controller.session.token == null
-    }
-
-    void "test registration insecure password 2"() {
-        given:
-        controller.request.method = 'POST'
-        controller.params.username = "Pepepe"
-        controller.params.password = "sho_rte"
-        controller.session.token = null
-        when:
-        controller.registration()
-        then:
-        controller.response.status == 200
-        controller.session.token == null
-    }
-
-    void "test registration insecure password 3"() {
-        given:
-        controller.request.method = 'POST'
-        controller.params.username = "Pepepe"
-        controller.params.password = "shO_rte"
-        controller.session.token = null
-        when:
-        controller.registration()
-        then:
-        controller.response.status == 200
-        controller.session.token == null
-    }
-
     void "test registration fail 1"() {
         given:
         controller.request.method = 'POST'
@@ -180,7 +102,7 @@ class RegistrationControllerIntegrationSpec extends IntegrationSpec {
         when:
         controller.registration()
         then:
-        controller.response.status == 200
+        thrown RuntimeException
         controller.session.token == null
         User.count() == 0
     }
@@ -197,7 +119,7 @@ class RegistrationControllerIntegrationSpec extends IntegrationSpec {
         when:
         controller.registration()
         then:
-        controller.response.status == 200
+        thrown RuntimeException
         controller.session.token == null
         User.count() == 0
         User.deleteAll(User.list())

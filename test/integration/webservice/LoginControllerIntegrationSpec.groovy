@@ -164,7 +164,7 @@ class LoginControllerIntegrationSpec extends IntegrationSpec{
         when:
         controller.login()
         then:
-        controller.response.status == 200
+        thrown RuntimeException
         controller.session.token == null
         User.count() == 1
         User.deleteAll(User.list())

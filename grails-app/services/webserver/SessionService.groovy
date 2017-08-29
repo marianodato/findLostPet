@@ -1,8 +1,10 @@
 package webserver
 
+import grails.transaction.Transactional
+
+@Transactional
 class SessionService {
 
-    static transactional = false
     def utilsService
 
     def generateSessionId(Long user_id) {
@@ -19,11 +21,9 @@ class SessionService {
         if (!utilsService.saveInstance(user)){
             user.discard()
             user.errors.each {
-                log.error("Error: Error saving to UserSession table: " + it + " .UserSession: " + user)
+                log.error("Error saving to UserSession table: " + it + " .UserSession: " + user)
             }
-            resp.message = "Oops! Something went wrong..."
-            resp.status = 500
-            return resp
+            throw new RuntimeException("Error saving to UserSession table.UserSession: " + user )
         }
 
         log.info("Session created!")

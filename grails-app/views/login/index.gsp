@@ -166,7 +166,7 @@ h1{
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <p class="location"><i class="location"></i>University of Belgrano</p>
+            <p class="location">University of Belgrano</p>
             <p class="phonenum">
                 <img src="${resource(dir:'images', file:'user.png')}" alt="" /> Not logged in
             </p>
@@ -211,13 +211,13 @@ h1{
                         <g:if test="${message}">
                             <div name="message" id="message" class="message">${message}</div>
                         </g:if>
-                        <input type="text" name="username" value="Username" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" />
-                        <input type="password" name="password" value="Password" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" />
+                        <input type="text" name="username" value="Username" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" required="required" />
+                        <input type="password" name="password" value="Password" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" required="required" />
                         <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Sign In"/> <!-- End Btn -->
                         <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
                     </div> <!-- End Box -->
                 </form>
-                <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
+                <!--<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>-->
             </div>
         </div>
     </div>
@@ -225,19 +225,19 @@ h1{
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
     <script>
-        function field_focus(field, username)
+        function field_focus(field, value)
         {
-            if(field.value == username)
+            if(field.value == value)
             {
                 field.value = '';
             }
         }
 
-        function field_blur(field, username)
+        function field_blur(field, value)
         {
             if(field.value == '')
             {
-                field.value = username;
+                field.value = value;
             }
         }
 
