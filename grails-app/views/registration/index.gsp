@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Find Lost Pet | Registration</title>
+    <title>FindLostPet | Registro</title>
     <link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -166,9 +166,9 @@ h1{
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <p class="location">University of Belgrano</p>
+            <p class="location">Universidad de Belgrano</p>
             <p class="phonenum">
-                <img src="${resource(dir:'images', file:'user.png')}" alt="" /> Not logged in
+                <img src="${resource(dir:'images', file:'user.png')}" alt="" /> No logueado
             </p>
             <div class="clearfix"></div>
         </div>
@@ -182,8 +182,8 @@ h1{
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
-                        <li><a href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+                        <li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
+                        <li><a href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
                     </nav>
                 </ul>
             </div>
@@ -207,20 +207,20 @@ h1{
             <div class="login_div">
                 <form class="login_form" method="post" action="registration">
                     <div class="box">
-                        <h1>Join</h1>
+                        <h1>Unirse</h1>
                         <g:if test="${message}">
                             <div name="message" id="message" class="message">${message}</div>
                         </g:if>
-                        <input type="text" name="username" value="Username" pattern='(?=^.{6,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$' title="Format: Only one special char (._-) allowed and it must not be at the extremas of the string. The first character cannot be a number. All the other characters allowed are letters and numbers. The total length should be between 6 and 20 chars" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" required="required" />
-                        <input type="password" name="password" value="Password" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!#%*?&])[A-Za-z\d$@$!#%*?&]{8,}' title="Minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" required="required" />
+                        <input type="text" name="username" value="Usuario" pattern='(?=^.{6,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$' title="Formato: Sólo un caracter especial (._-) permitido y no debe estar en los extremos. El primer caracter no puede ser numérico. Todos los demás caracteres permitidos son letras y números. La longitud total debe estar entre 6 y 20 caracteres" onFocus="field_focus(this, 'Usuario');" onblur="field_blur(this, 'Usuario');" class="username" required="required" />
+                        <input type="password" name="password" value="Contraseña" pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!#%*?&])[A-Za-z\d$@$!#%*?&]{8,}' title="Formato: Mínimo 8 caracteres, al menos 1 en mayúscula, 1 en minúscula, 1 número y 1 caracter especial" onFocus="field_focus(this, 'Contraseña');" onblur="field_blur(this, 'Contraseña');" class="username" required="required" />
                         <input type="email" name="email" value="Email" onFocus="field_focus(this, 'Email');" onblur="field_blur(this, 'Email');" class="username" required="required"/>
-                        <input type="text" name="name" value="Complete Name" onFocus="field_focus(this, 'Complete Name');" onblur="field_blur(this, 'Complete Name');" class="username" required="required"/>
-                        <input type='tel' name="phone_number" value="Phone Number" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title="Format: +99(99)9999-9999" onFocus="field_focus(this, 'Phone Number');" onblur="field_blur(this, 'Phone Number');" class="username" required="required">
+                        <input type="text" name="name" value="Nombre completo" onFocus="field_focus(this, 'Nombre completo');" onblur="field_blur(this, 'Nombre completo');" class="username" required="required"/>
+                        <input type='tel' name="phone_number" value="Número telefónico" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title="Formato: +54(11)1234-5678" onFocus="field_focus(this, 'Número telefónico');" onblur="field_blur(this, 'Número telefónico');" class="username" required="required">
                         <div style="text-align:left;padding-top: 10px;padding-left: 20px">
-                            <input type="radio" name="gender" value="male" checked > Male<br>
-                            <input type="radio" name="gender" value="female" > Female<br>
+                            <input type="radio" name="gender" value="male" checked > Masculino<br>
+                            <input type="radio" name="gender" value="female" > Femenino<br>
                         </div>
-                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
+                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/> <!-- End Btn2 -->
                     </div> <!-- End Box -->
                 </form>
             </div>

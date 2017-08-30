@@ -9,7 +9,7 @@
 			<g:renderException exception="${exception}" />
 		</g:if>
 		<g:else>
-				An error has occurred
+				Ocurrió un error inesperado
 		</g:else>
 	</body>
 </html>

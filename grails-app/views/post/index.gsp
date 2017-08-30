@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Find Lost Pet | Post</title>
+    <title>FindLostPet | Carga</title>
     <link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <p class="location">University of Belgrano</p>
+            <p class="location">Universidad de Belgrano</p>
             <p class="phonenum">
                 <img src="${resource(dir:'images', file:'user.png')}" alt="" /> ${username}
             </p>
@@ -80,17 +80,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
-                        <li><a href="${createLink(controller: 'info', action: 'index')}">Info</a></li>
-                        <li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
-                        <li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
-                        <li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
-                        <li><a href="${createLink(controller: 'contact', action: 'index')}">Contact</a></li>
+                        <li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
                         <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Post</a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">
-                                    <input type="submit" class="submitLink" value="LOG OUT"/>
+                                    <input type="submit" class="submitLink" value="  SALIR"/>
                                 </form>
                             </a>
                         </li>
@@ -116,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="main">
         <div class="container">
             <div class="contact-form">
-                <h2>Post</h2>
+                <h2>Carga</h2>
                 <form method="post" action="post" enctype="multipart/form-data">
                     <noscript>
                         <div name="message" id="no_js_message" class="message">Please enable javascript and reload the page</div>
@@ -126,30 +121,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </g:if>
                     <div class="left_form">
                         <div>
-                            <span><label>STATUS</label></span>
+                            <span><label>ESTADO</label></span>
                             <select name="status">
-                                <option value="lost">Lost</option>
-                                <option value="found">Found</option>
+                                <option value="lost">Perdido</option>
+                                <option value="found">Encontrado</option>
                             </select>
                         </div>
                         <div>
-                            <span><label>NICKNAME</label></span>
+                            <span><label>APODO</label></span>
                             <span><input type="text" name="nickname" class="nickname" required="required"/></span>
                         </div>
                         <div>
-                            <span><label>DESCRIPTION</label></span>
+                            <span><label>DESCRIPCIÓN</label></span>
                             <span><textarea name="description" class="description" required="required"></textarea></span>
                         </div>
                         <div class="left_form">
                             <div style="text-align:left">
-                                <span><label>GENDER</label></span>
-                                <input type="radio" name="gender" value="male" checked > Male<br>
-                                <input type="radio" name="gender" value="female" > Female<br>
+                                <span><label>GÉNERO</label></span>
+                                <input type="radio" name="gender" value="male" checked > Masculino<br>
+                                <input type="radio" name="gender" value="female" > Femenino<br>
                             </div>
                         </div>
                         <div class="rigth_form">
                             <div>
-                                <span><label>IMAGE</label></span>
+                                <span><label>IMÁGEN</label></span>
                                 <input type="file" name="image" accept="image/*">
                             </div>
                         </div>
@@ -161,43 +156,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <g:each in="${petColors}">
                                         <option value="${it.id}">${it.description}</option>
                                     </g:each>
-                                <option value="Other">Other</option>
+                                <option value="Other">Otro</option>
                             </select>
                             <div>
                                 <span><input id="inputPetColorsOther" type="hidden" name="otherColor" class="other" required="required"/></span>
                             </div>
                         </div>
                         <div>
-                            <span><label>SIZE</label></span>
+                            <span><label>TAMAÑO</label></span>
                             <select id="selectPetSizes" name="selectPetSizes">
                                 <g:each in="${petSizes}">
                                     <option value="${it.id}">${it.description}</option>
                                 </g:each>
-                                <option value="Other">Other</option>
+                                <option value="Other">Otro</option>
                             </select>
                             <div>
                                 <span><input id="inputPetSizesOther" type="hidden" name="otherSize" class="other" required="required"/></span>
                             </div>
                         </div>
                         <div>
-                            <span><label>TYPE</label></span>
+                            <span><label>Tipo</label></span>
                             <select id="selectPetTypes" name="selectPetTypes">
                                 <g:each in="${petTypes}">
                                     <option data-id="${it.id}" value="${it.id}">${it.description}</option>
                                 </g:each>
-                                <option value="Other">Other</option>
+                                <option value="Other">Otro</option>
                             </select>
                             <div>
                                 <span><input id="inputPetTypesOther" type="hidden" name="otherType" class="other" required="required"/></span>
                             </div>
                         </div>
                         <div>
-                            <span><label>RACE</label></span>
+                            <span><label>RAZA</label></span>
                             <select id="selectPetRaces" name="selectPetRaces">
                                 <g:each in="${petRaces}">
                                     <option name="optionsPetRaces" data-id="${it.petType.id}" value="${it.id}">${it.description}</option>
                                 </g:each>
-                                <option id="optionPetRacesOther" value="Other">Other</option>
+                                <option id="optionPetRacesOther" value="Other">Otro</option>
                             </select>
                             <div>
                                 <span><input id="inputPetRacesOther" type="hidden" name="otherRace" class="other" required="required"/></span>
@@ -206,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="clearfix"></div>
                     <div class="content_bottom">
-                        <span><label>LOCATION</label></span>
+                        <span><label>UBICACIÓN</label></span>
                         <div>
                             <span><input id="latitude" type="hidden" name="latitude" class="latitude"/></span>
                         </div>
@@ -218,7 +213,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                         <div class="clearfix"></div>
                         <div>
-                            <span><input type="submit" value="Submit" class="myButton"></span>
+                            <span><input type="submit" value="Cargar" class="myButton"></span>
                         </div>
                     </div>
                 </form>
@@ -230,22 +225,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- content-section-ends -->
 <!-- footer-section-starts -->
-<div class="footer1">
-    <div class="container">
-        <div class="follow-us-on">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <i class="facebook"></i>
-                <i class="twitter"></i>
-                <i class="pinterest"></i>
-                <i class="googlepluse"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
-            <div class="copyrights">
-                <p>Design by  <a href="http://w3layouts.com">  W3layouts</a></p>
-            </div>
+<div class="header">
+    <div class="header-top" style="background-color: #474747;">
+        <div class="container">
+            <p class="location">Copyright © 2017 FindLostPet</p>
         </div>
-        <div class="clearfix"></div>
     </div>
 </div>
 <!-- footer-section-ends -->
@@ -292,7 +276,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function petColorsLogic() {
         var optionPetColorsSelectedText = selectPetColors.options[selectPetColors.selectedIndex].text;
-        if(optionPetColorsSelectedText == "Other")
+        if(optionPetColorsSelectedText == "Otro")
             inputPetColorsOther.type = 'text';
         else
             inputPetColorsOther.type = 'hidden';
@@ -300,7 +284,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function petSizesLogic(){
         var optionPetSizesSelectedText = selectPetSizes.options[selectPetSizes.selectedIndex].text;
-        if(optionPetSizesSelectedText == "Other")
+        if(optionPetSizesSelectedText == "Otro")
             inputPetSizesOther.type = 'text';
         else
             inputPetSizesOther.type = 'hidden';
@@ -311,7 +295,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         inputPetRacesOther.type = 'text';
         selectPetRaces.selectedIndex = optionsPetRaces.length;
 
-        if(optionPetTypesSelectedText == "Other") {
+        if(optionPetTypesSelectedText == "Otro") {
 
             inputPetTypesOther.type = 'text';
 
@@ -343,7 +327,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function petRacesLogic() {
         var optionPetRacesSelectedText = selectPetRaces.options[selectPetRaces.selectedIndex].text;
-        if(optionPetRacesSelectedText == "Other")
+        if(optionPetRacesSelectedText == "Otro")
             inputPetRacesOther.type = 'text';
         else
             inputPetRacesOther.type = 'hidden';

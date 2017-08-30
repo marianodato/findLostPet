@@ -10,7 +10,7 @@ class LoginService {
         def resp = [:]
 
         def user = User.findByUsername(username)
-        resp.message = "Invalid username or password!"
+        resp.message = "Usuario o contraseña inválido!"
         resp.status = 400
 
         log.info("User: " + user)
@@ -24,8 +24,8 @@ class LoginService {
 
             resp = sessionService.generateSessionId(user.id)
 
-            log.info("Login successful!")
-            resp.message = "Login successful!"
+            log.info("Log in successful!")
+            resp.message = "Log in exitoso!"
             resp.status = 201
             return resp
         }

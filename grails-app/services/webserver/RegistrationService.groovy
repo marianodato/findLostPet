@@ -16,14 +16,14 @@ class RegistrationService {
 
         if (user){
             log.error("Username already registered!")
-            resp.message = "Username already registered!"
+            resp.message = "Usuario ya registrado!"
             resp.status = 400
             return resp
         }
 
         if (username == password){
             log.error("Username cannot be the same as password!")
-            resp.message = "Username cannot be the same as password!"
+            resp.message = "El usuario no puede ser igual a la contraseña!"
             resp.status = 400
             return resp
         }
@@ -42,7 +42,7 @@ class RegistrationService {
         }
 
         log.info("Sign up successful!")
-        resp.message = "Sign up successful!"
+        resp.message = "Registro exitoso!"
         resp.status = 201
 
         return resp

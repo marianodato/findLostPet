@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Find Lost Pet | Photos</title>
+<title>FindLostPet | Photos</title>
 	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="header-top">
 			<div class="container">
-				<p class="location">University of Belgrano</p>
+				<p class="location">Universidad de Belgrano</p>
 				<p class="phonenum">
 						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> ${username}
 				</p>

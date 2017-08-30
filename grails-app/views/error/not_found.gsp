@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Find Lost Pet | Not Found</title>
+<title>FindLostPet | No encontrado</title>
 	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -52,13 +52,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="header-top">
 			<div class="container">
-				<p class="location">University of Belgrano</p>
+				<p class="location">Universidad de Belgrano</p>
 				<p class="phonenum">
 					<g:if test="${logged == true}">
 						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> ${username}
 					</g:if>
 					<g:else>
-						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> Not logged in
+						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> No logueado
 					</g:else>
 				</p>
 				<div class="clearfix"></div>
@@ -73,26 +73,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-menu">
 					<ul>
 						<nav class="cl-effect-5">
-							<li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
+							<li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
 							<g:if test="${logged == true}">
-								<li><a href="${createLink(controller: 'info', action: 'index')}">Info</a></li>
-								<li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
-								<li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
-								<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
-								<li><a href="${createLink(controller: 'contact', action: 'index')}">Contact</a></li>
-								<li><a href="${createLink(controller: 'post', action: 'index')}">Post</a></li>
+								<li><a href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
 							</g:if>
 							<g:if test="${logged == true}">
 								<li>
 									<a>
 										<form method="post" controller="login" action="logout">
-											<input type="submit" class="submitLink" value="LOG OUT"/>
+											<input type="submit" class="submitLink" value="  SALIR"/>
 										</form>
 									</a>
 								</li>
 							</g:if>
 							<g:else>
-								<li><a href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+								<li><a href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
 							</g:else>
 						</nav>
 					</ul>
@@ -118,37 +113,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="error">
 				<div class="error-head">
 					<h1>404</h1>
-					<h2>Sorry This page is not found...!</h2>
-					<a class="hvr-bounce-to-left button" href="${createLink(controller: 'home', action: 'index')}">Go Back</a>
+					<h2>Disculpa, la página no fue encontrada..!</h2>
+					<a class="hvr-bounce-to-left button" href="${createLink(controller: 'home', action: 'index')}">Volver</a>
 				</div>
 			</div>				
 	       </div>
 	</div> 
 	<!-- content-section-ends -->
 	<!-- footer-section-starts -->
-	<div class="footer">
-		<div class="container">
-			<div class="col-md-5 contact-section">
-				<h4>Contact Form</h4>
-					<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					<textarea onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Message';" >Message</textarea>
-					<input type="submit" value="SEND">
+	<div class="header">
+		<div class="header-top" style="background-color: #474747;">
+			<div class="container">
+				<p class="location">Copyright © 2017 FindLostPet</p>
 			</div>
-			<div class="col-md-7 follow-us">
-				<h4>Follow Us</h4>
-				<div class="social-icons">
-					<i class="facebook"></i>
-					<i class="twitter"></i>
-					<i class="pinterest"></i>
-					<i class="googlepluse"></i>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
-				<div class="copyright">
-					<p>Design by  <a href="http://w3layouts.com">  W3layouts</a></p>
-				</div>
-			</div>
-			<div class="clearfix"></div>
 		</div>
 	</div>
 	<!-- footer-section-ends -->

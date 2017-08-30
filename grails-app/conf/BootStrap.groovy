@@ -11,7 +11,7 @@ class BootStrap {
         if (Environment.current == Environment.DEVELOPMENT) {
             log.info("Initializing data...")
             //password: Password1*
-            User user = new User(username: "adminuser", name: "Admin User", gender: "Male", email: "admin@gmail.com", phoneNumber: "+54(11)1234-5678", isAdmin: true, password: "100000:b9f0cdb48f6dd12694eaf1de44ab4a071da56765498abe8732dcf941966bf81ce839dfa4dae220e656760b8ff0d3a83103913a67bc9685083f445dda464449b2:51e7688ee57d721ad50622f50bb248ca55e34d01d5ee7168db050990585bfffcb49d3a9fa655cd3178ace50b668b201411a6bbdca18b8d4177307a33e842db6a", sessionToken: "9c560129d2c5258fbaa5fedf6a489653862ff5bc41c17927477e5b98b9529ef4210d49a8d2ca67279fc44af6b559d443ec79b9a1277a4036775b32c230a396d8")
+            User user = new User(username: "adminuser", name: "Admin User", gender: "male", email: "admin@gmail.com", phoneNumber: "+54(11)1234-5678", isAdmin: true, password: "100000:b9f0cdb48f6dd12694eaf1de44ab4a071da56765498abe8732dcf941966bf81ce839dfa4dae220e656760b8ff0d3a83103913a67bc9685083f445dda464449b2:51e7688ee57d721ad50622f50bb248ca55e34d01d5ee7168db050990585bfffcb49d3a9fa655cd3178ace50b668b201411a6bbdca18b8d4177307a33e842db6a", sessionToken: "9c560129d2c5258fbaa5fedf6a489653862ff5bc41c17927477e5b98b9529ef4210d49a8d2ca67279fc44af6b559d443ec79b9a1277a4036775b32c230a396d8")
             user.dateCreated = new Date()
             if (!user.save(flush: true))
             {
@@ -20,7 +20,7 @@ class BootStrap {
                     log.error("Error: Error saving to User table: " + it + " . User: " + user)
                 }
             }
-            PetColor petColor1 = new PetColor(description: "White")
+            PetColor petColor1 = new PetColor(description: "Blanco")
             petColor1.dateCreated = new Date()
             if (!petColor1.save(flush: true))
             {
@@ -29,7 +29,7 @@ class BootStrap {
                     log.error("Error: Error saving to PetColor table: " + it + " . PetColor: " + petColor1)
                 }
             }
-            PetColor petColor2 = new PetColor(description: "Black")
+            PetColor petColor2 = new PetColor(description: "Negro")
             petColor2.dateCreated = new Date()
             if (!petColor2.save(flush: true)) {
                 petColor2.discard()
@@ -37,7 +37,7 @@ class BootStrap {
                     log.error("Error: Error saving to PetColor table: " + it + " . PetColor: " + petColor2)
                 }
             }
-            PetSize petSize1 = new PetSize(description: "Thin")
+            PetSize petSize1 = new PetSize(description: "Delgado")
             petSize1.dateCreated = new Date()
             if (!petSize1.save(flush: true))
             {
@@ -46,7 +46,7 @@ class BootStrap {
                     log.error("Error: Error saving to PetSize table: " + it + " . PetSize: " + petSize1)
                 }
             }
-            PetSize petSize2 = new PetSize(description: "Obese")
+            PetSize petSize2 = new PetSize(description: "Obeso")
             petSize2.dateCreated = new Date()
             if (!petSize2.save(flush: true))
             {
@@ -55,7 +55,7 @@ class BootStrap {
                     log.error("Error: Error saving to PetSize table: " + it + " . PetSize: " + petSize2)
                 }
             }
-            PetType petType1 = new PetType(description: "Dog")
+            PetType petType1 = new PetType(description: "Perro")
             petType1.dateCreated = new Date()
             if (!petType1.save(flush: true))
             {
@@ -64,7 +64,7 @@ class BootStrap {
                     log.error("Error: Error saving to PetType table: " + it + " . PetType: " + petType1)
                 }
             }
-            PetType petType2 = new PetType(description: "Cat")
+            PetType petType2 = new PetType(description: "Gato")
             petType2.dateCreated = new Date()
             if (!petType2.save(flush: true))
             {
@@ -73,7 +73,7 @@ class BootStrap {
                     log.error("Error: Error saving to PetType table: " + it + " . PetType: " + petType2)
                 }
             }
-            PetType petType3 = new PetType(description: "Fish")
+            PetType petType3 = new PetType(description: "Pez")
             petType3.dateCreated = new Date()
             if (!petType3.save(flush: true))
             {

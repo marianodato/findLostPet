@@ -19,7 +19,7 @@ class PostService {
         if (!params.latitude || !params.longitude)
         {
             log.error("Please select a location in the map!")
-            resp.message = "Please select a location in the map!"
+            resp.message = "Por favor, seleccione una ubicación en el mapa!"
             resp.status = 400
             return resp
         }
@@ -106,7 +106,7 @@ class PostService {
         }
 
         log.info("Pet saved successfully!")
-        resp.message = "Pet saved successfully!"
+        resp.message = "Carga exitosa!"
         resp.status = 201
         return resp
     }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Find Lost Pet | Login</title>
+    <title>FindLostPet | Entrar</title>
     <link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -166,9 +166,9 @@ h1{
 <div class="header">
     <div class="header-top">
         <div class="container">
-            <p class="location">University of Belgrano</p>
+            <p class="location">Universidad de Belgrano</p>
             <p class="phonenum">
-                <img src="${resource(dir:'images', file:'user.png')}" alt="" /> Not logged in
+                <img src="${resource(dir:'images', file:'user.png')}" alt="" /> No logueado
             </p>
             <div class="clearfix"></div>
         </div>
@@ -182,8 +182,8 @@ h1{
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
-                        <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+                        <li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
+                        <li><a class="active" href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
                     </nav>
                 </ul>
             </div>
@@ -207,14 +207,14 @@ h1{
             <div class="login_div">
                 <form class="login_form" method="post" action="login">
                     <div class="box">
-                        <h1>Welcome</h1>
+                        <h1>Bienvenido</h1>
                         <g:if test="${message}">
                             <div name="message" id="message" class="message">${message}</div>
                         </g:if>
-                        <input type="text" name="username" value="Username" onFocus="field_focus(this, 'Username');" onblur="field_blur(this, 'Username');" class="username" required="required" />
-                        <input type="password" name="password" value="Password" onFocus="field_focus(this, 'Password');" onblur="field_blur(this, 'Password');" class="username" required="required" />
-                        <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Sign In"/> <!-- End Btn -->
-                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Sign Up"/> <!-- End Btn2 -->
+                        <input type="text" name="username" value="Usuario" onFocus="field_focus(this, 'Usuario');" onblur="field_blur(this, 'Usuario');" class="username" required="required" />
+                        <input type="password" name="password" value="Contraseña" onFocus="field_focus(this, 'Contraseña');" onblur="field_blur(this, 'Password');" class="username" required="required" />
+                        <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Entrar"/> <!-- End Btn -->
+                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/> <!-- End Btn2 -->
                     </div> <!-- End Box -->
                 </form>
                 <!--<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>-->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Find Lost Pet | Home</title>
+<title>FindLostPet | Inicio</title>
 	<link href="${resource(dir:'css', file:'bootstrap.css')}" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -52,13 +52,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header">
 		<div class="header-top">
 			<div class="container">
-				<p class="location">University of Belgrano</p>
+				<p class="location">Universidad de Belgrano</p>
 				<p class="phonenum">
 					<g:if test="${logged == true}">
 						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> ${username}
 					</g:if>
 					<g:else>
-						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> Not logged in
+						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> No logueado
 					</g:else>
 				</p>
 				<div class="clearfix"></div>
@@ -73,26 +73,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-menu">
 					<ul>
 						<nav class="cl-effect-5">
-							<li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Home</a></li>
+							<li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
 							<g:if test="${logged == true}">
-								<li><a href="${createLink(controller: 'info', action: 'index')}">Info</a></li>
-								<li><a href="${createLink(controller: 'photos', action: 'index')}">Photos</a></li>
-								<li><a href="${createLink(controller: 'blog', action: 'index')}">Blog</a></li>
-								<li><a href="${createLink(controller: 'blogs', action: 'index')}">Blogs</a></li>
-								<li><a href="${createLink(controller: 'contact', action: 'index')}">Contact</a></li>
-								<li><a href="${createLink(controller: 'post', action: 'index')}">Post</a></li>
+								<li><a href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
 							</g:if>
 							<g:if test="${logged == true}">
 								<li>
 									<a>
 										<form method="post" controller="login" action="logout">
-											<input type="submit" class="submitLink" value="LOG OUT"/>
+												<input type="submit" class="submitLink" value="  SALIR"/>
 										</form>
 									</a>
 								</li>
 							</g:if>
 							<g:else>
-								<li><a href="${createLink(controller: 'login', action: 'index')}">Login</a></li>
+								<li><a href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
 							</g:else>
 						</nav>
 					</ul>
@@ -119,22 +114,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <li>
 					 <img src="${resource(dir:'images', file:'3.jpg')}" alt=""/>
 					  <div class="caption">
-						<h2>Until one has loved an animal a part of one's soul remains unawakened.</h2>
-						<a class="more" href="#">READ MORE</a>
+						<h2>Hasta que uno ama a un animal, una parte de su alma permanece dormida.</h2>
+						  <a class="more" href="${createLink(controller: 'login', action: 'index')}">UNIRME</a>
 					  </div>
 				 </li>
 				 <li>
 					 <img src="${resource(dir:'images', file:'2.jpg')}" alt=""/>
 					  <div class="caption">
-						<h2>A dog is the only thing on earth that loves you more than you love yourself.</h2>
-						<a class="more" href="#">READ MORE</a>
+						<h2>Una mascota es lo único en la tierra que te ama más de lo que te amas a ti mismo.</h2>
+						<a class="more" href="${createLink(controller: 'login', action: 'index')}">UNIRME</a>
 					  </div>
 				 </li>
 				 <li>
 					 <img src="${resource(dir:'images', file:'1.jpg')}" alt=""/>
 					  <div class="caption">
-						<h2>Money can buy you a fine dog, but only love can make him wag his tail.</h2>
-						<a class="more" href="#">READ MORE</a>
+						<h2>Los animales son muy buenos amigos, no hacen preguntas y tampoco critican.</h2>
+						<a class="more" href="${createLink(controller: 'login', action: 'index')}">UNIRME</a>
 					  </div>
 				 </li>
 			  </ul>	      
@@ -147,10 +142,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="welcome-section">
 				<div class="container">
 					<div class="col-md-6 welcome-grid text-center">
-						<h3>Welcome</h3>
-						<h5>Duis autem vel eum iriure dolor in hendrerit in vulputa</h5>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-						<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. littera gothica.</p>
+						<h3>Bienvenido</h3>
+						<h5>A nuestra red social de mascotas</h5>
+						<p>Las mascotas no sólo son una compañía, son amigos con los que puedes divertirte y pasar momentos increíbles de tu vida. Pero también debes cuidar de ellas y protegerlas de todo aquello que las pueda lastimar.</p>
+						<p>Para ello en FindLostPet buscamos crear una gran comunidad llena de personas repletas de amor hacia las mascotas. Si sos una de estas personas, qué estás esperando para unirte a nosotros?</p>
 					</div>
 					<div class="col-md-6 images">
 						<div class="img1">
@@ -166,59 +161,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="about-section text-center">
 				<div class="container">
-					<h2>Info</h2>
+					<h2>¿Qué puedo hacer?</h2>
 					<div class="col-md-6 about-section-grid text-left">
-						<h4>Mirum est notare quam littera </h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
+						<h4>Reportar mascotas perdidas</h4>
+						<p>Con FindLostPet podrás reportar fácilmente cuando pierdas o encuentras una mascota por la calle y nuestra gran comunidad se encargará de responderte. Danos una oportunidad para poder ayudarte!</p>
 					</div>
 					<div class="col-md-6 about-section-grid text-left">
-						<h4>Mirum est notare quam littera </h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio</p>
+						<h4>Buscar mascotas cercanas</h4>
+						<p>Encuentra mascotas perdidas o encontradas cerca a donde vives. Interactúa con personas con problemas similares y busca a quien puedes darle una mano en tu propio barrio. Sólamente con unos pocos clicks!</p>
 					</div>
 					<div class="clearfix"></div>
-					<a href="${createLink(controller: 'info', action: 'index')}" class="btn btn-1 btn-1c">read more</a>
+					<a href="${createLink(controller: 'login', action: 'index')}" class="btn btn-1 btn-1c">Unirme</a>
 				</div>
 			</div>
 			<div class="textimonials-section text-center">
 				<div class="container">
 					<img src="${resource(dir:'images', file:'t.png')}" alt="" />
-					<h5>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram</h5>
-					<p>Duis autem vel eum iriure dolor</p>
-					<a href="" class="btn btn-1 btn-1d">Read Testimonials</a>
+					<h5>Gracias a FindLostPet pude encontrar a mi cachorro bebé que se había escapado de mi casa. Recomiendo este sitio para cualquier amante de las mascotas!</h5>
+					<p>Juan Ortiz</p>
+					<a href="${createLink(controller: 'login', action: 'index')}" class="btn btn-1 btn-1d">Unirme</a>
 				</div>
 			</div>
-		</div>
-	<!-- content-section-ends -->
-	<div class="main-map">
-		    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396369.7968760607!2d-94.5757195!3d39.091919000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f75eafe99997%3A0x558525e66aaa51a2!2sKansas+City%2C+MO%2C+USA!5e0!3m2!1sen!2sin!4v1416895090472"  frameborder="0" style="border:0"></iframe>
 		</div>
 
-	<!-- footer-section-starts -->
-	<div class="footer">
-		<div class="container">
-			<div class="col-md-5 contact-section">
-				<h4>Contact Form</h4>
-					<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-					<textarea onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Message';" >Message</textarea>
-					<input type="submit" value="SEND">
+	<div class="header">
+		<div class="header-top" style="background-color: #474747;">
+			<div class="container">
+				<p class="location">Copyright © 2017 FindLostPet</p>
 			</div>
-			<div class="col-md-7 follow-us">
-				<h4>Follow Us</h4>
-				<div class="social-icons">
-					<i class="facebook"></i>
-					<i class="twitter"></i>
-					<i class="pinterest"></i>
-					<i class="googlepluse"></i>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor</p>
-				<div class="copyright">
-					<p>Design by  <a href="http://w3layouts.com">  W3layouts</a></p>
-				</div>
-			</div>
-			<div class="clearfix"></div>
 		</div>
 	</div>
+
 	<!-- footer-section-ends -->
 	<script type="text/javascript">
 						$(document).ready(function() {
