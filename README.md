@@ -1,2 +1,2 @@
 # grailsPOC
-Simple Grails Proof of Concept Web Server
+Simple Grails Proof of Concept Website
