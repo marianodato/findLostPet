@@ -92,7 +92,7 @@ class PostService {
             petRace = PetRace.findById(params.selectPetRaces as Long)
         }
 
-        pet = new Pet(nickname: params.nickname, gender: params.gender, description: params.description, image: params.image , user: user, petColor: petColor, petType: petType, petSize:petSize, petRace:petRace, latitude: params.latitude as BigDecimal, longitude: params.longitude as BigDecimal, status: params.status)
+        pet = new Pet(nickname: params.nickname, gender: params.gender, description: params.description, image: params.image , user: user, petColor: petColor, petType: petType, petSize:petSize, petRace:petRace, latitude: params.latitude as BigDecimal, longitude: params.longitude as BigDecimal, status: params.status, imageContentType: params.imageContentType)
         Date date = new Date()
         pet.dateCreated = date
         pet.lastUpdated = date

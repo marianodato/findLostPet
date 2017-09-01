@@ -51,17 +51,21 @@ class PostController {
 
         log.info("User_id: " + user.id)
         log.info("Params: " + params)
-        
-        if (params.image)
-        {
+
+        if (params.image){
             def random = PasswordHash.createRandomSaltString()
             new FileOutputStream(ServletContextHolder.servletContext.getRealPath('/') + random) << params.image.getInputStream()
             File file = new File(ServletContextHolder.servletContext.getRealPath('/') + random)
-            params.image = file.bytes
+            if (file.bytes) {
+                params.imageContentType = params.image.contentType
+                params.image = file.bytes
+            }else {
+                params.imageContentType = null
+                params.image = null
+            }
             file.delete()
-        }else{
-            params.image = null
         }
+
 
         resp = postService.createPost(user, params)
 
