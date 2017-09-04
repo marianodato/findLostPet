@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <div class="left_form">
                                             <div class="blog_img">
                                                 <g:if test="${it.image}">
-                                                    <img src="/findLostPet/image?id=${it.id}" alt="">
+                                                    <img src="${createLink(controller:'image', action:'index')}?id=${it.id}" alt="">
                                                 </g:if>
                                                 <g:else>
                                                     <img src="${resource(dir:'images', file:'not-available.png')}" alt="">
@@ -160,17 +160,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </g:each>
                             <div class="content-pagenation">
                                 <g:if test="${page!=1 && page!=2}">
-                                    <li><a href="/findLostPet/pet?page=1">Primero</a></li>
+                                    <li><a href="${createLink(controller:'pet', action:'index')}?page=1">Primero</a></li>
                                     <li><span>. . . . .</span></li>
                                 </g:if>
                                 <g:each var="i" in="${(1..<(pages+1))}">
                                     <g:if test="${i == (page-1) || i == page || i == (page + 1)}">
-                                        <li><a id="page-${i}" href="/findLostPet/pet?page=${i}">${i}</a></li>
+                                        <li><a id="page-${i}" href="${createLink(controller:'pet', action:'index')}?page=${i}">${i}</a></li>
                                     </g:if>
                                 </g:each>
                                 <g:if test="${page!=pages && page!=(pages-1)}">
                                     <li><span>. . . . .</span></li>
-                                    <li><a href="/findLostPet/pet?page=${pages}">Último</a></li>
+                                    <li><a href="${createLink(controller:'pet', action:'index')}?page=${pages}">Último</a></li>
                                 </g:if>
 
     <div class="clearfix"> </div>
