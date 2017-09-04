@@ -31,7 +31,7 @@ class Pet {
         image blank:false, nullable: true
         latitude scale: 16, nullable: false
         longitude scale: 16, nullable: false
-        status blank:false, nullable: false, matches: '^lost$|^found$'
+        status blank:false, nullable: false, matches: '^lost$|^found$|^finished$'
         imageContentType blank:false, nullable: true
     }
 }

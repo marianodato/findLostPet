@@ -11,7 +11,7 @@ class RegistrationController {
 
         if (user){
             log.info("User_id: " + user.id)
-            redirect(controller: "home", action: "index")
+            redirect(controller: "pet", action: "index")
             return
         }
 
@@ -25,7 +25,7 @@ class RegistrationController {
 
         if (user){
             log.info("User_id: " + user.id)
-            redirect(controller: "home", action: "index")
+            redirect(controller: "pet", action: "index")
             return
         }
 

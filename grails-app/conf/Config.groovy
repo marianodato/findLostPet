@@ -1,5 +1,3 @@
-import org.apache.log4j.RollingFileAppender
-
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -100,23 +98,21 @@ environments {
 // log4j configuration
 log4j = {
 
-    info stdout: "org.codehaus.groovy.grails.web.servlet"
-    info stdout: "org.codehaus.groovy.grails.web.pages"
-    info stdout: "org.codehaus.groovy.grails.web.sitemesh"
-    info stdout: "org.codehaus.groovy.grails.web.mapping.filter"
-    info stdout: "org.codehaus.groovy.grails.web.mapping"
-    info stdout: "org.codehaus.groovy.grails.commons"
-    info stdout: "org.codehaus.groovy.grails.plugins"
-    info stdout: "org.codehaus.groovy.grails.orm.hibernate"
-    info stdout: "org.springframework"
-    info stdout: "org.hibernate"
-    info stdout: "net.sf.ehcache.hibernate"
-    info stdout: "grails.app.controllers"
-    info stdout: "grails.app.services"
-    info stdout: "grails.app.filters"
-    info stdout: "grails.app.jobs"
-    debug stdout: "grails.app.controllers"
-    debug stdout: "grails.app.services"
-    debug stdout: "grails.app.filters"
-    debug stdout: "grails.app.jobs"
+    appenders {
+        console name: 'stdout', layout: pattern(conversionPattern: '%d{yyyy-MM-dd HH:mm:ss,SSS Z} [%t] %-5p %c{1}:%L %x - %m%n')
+    }
+
+    error stdout: "org.codehaus.groovy.grails.web.servlet"
+    error stdout: "org.codehaus.groovy.grails.web.pages"
+    error stdout: "org.codehaus.groovy.grails.web.sitemesh"
+    error stdout: "org.codehaus.groovy.grails.web.mapping.filter"
+    error stdout: "org.codehaus.groovy.grails.web.mapping"
+    error stdout: "org.codehaus.groovy.grails.commons"
+    error stdout: "org.codehaus.groovy.grails.plugins"
+    error stdout: "org.codehaus.groovy.grails.orm.hibernate"
+    error stdout: "org.springframework"
+    error stdout: "org.hibernate"
+    error stdout: "net.sf.ehcache.hibernate"
+
+    info stdout: "grails.app", additivity: false
 }

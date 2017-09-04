@@ -27,7 +27,7 @@ class HomeControllerIntegrationSpec extends IntegrationSpec {
         when:
         controller.index()
         then:
-        controller.response.status == 200
+        controller.response.status == 302
         controller.session.token == "9c560129d2c5258fbaa5fedf6a489653862ff5bc41c17927477e5b98b9529ef4210d49a8d2ca67279fc44af6b559d443ec79b9a1277a4036775b32c230a396d8"
         User.count() == 1
         User.deleteAll(User.list())

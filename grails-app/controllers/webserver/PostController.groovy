@@ -70,7 +70,7 @@ class PostController {
         resp = postService.createPost(user, params)
 
         if (resp.status == 201) {
-            redirect(controller: "home", action: "index")
+            redirect(controller: "pet", action: "index")
             return
         }
 

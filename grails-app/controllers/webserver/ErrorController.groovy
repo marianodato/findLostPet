@@ -8,19 +8,39 @@ class ErrorController {
 
     def handleError() {
 
-        def exception = request.exception
+        try{
 
-        if (exception instanceof GrailsWrappedRuntimeException) {
-            while (exception instanceof GrailsWrappedRuntimeException) {
-                exception = exception.cause
+            def exception = request.exception
+
+            def user = sessionService.getUser(session.token)
+            def model = [:]
+
+            if (!user) {
+                model.logged = false
+            } else {
+                log.info("User_id: " + user.id)
+                model.logged = true
+                model.username = user.username
             }
+
+            if (exception instanceof GrailsWrappedRuntimeException) {
+                while (exception instanceof GrailsWrappedRuntimeException) {
+                    exception = exception.cause
+                }
+            }
+
+            log.error("500 " + exception.message)
+            log.error("Cause: " + exception.cause)
+            model.exception = exception
+
+            response.status = 500
+            render (view:"/error/index",  model:model)
+
+        }catch(Exception e)
+        {
+            response.status = 500
+            render (view:"/error/index")
         }
-
-        log.error("500 " + exception.message)
-        log.error("Cause: " + exception.cause)
-
-        response.status = 500
-        render (view:"/error/index", model:[exception:exception])
         return
     }
 

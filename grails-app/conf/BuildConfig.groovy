@@ -55,7 +55,6 @@ grails.project.dependency.resolution = {
         runtime group:'net.sf.json-lib', name:'json-lib', version:'2.4', classifier:'jdk15'
 
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
-        test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
     }
 
     plugins {
@@ -72,10 +71,6 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:3.6.10.15"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
-
-        test(":spock:0.7") {
-            exclude "spock-grails-support"
-        }
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

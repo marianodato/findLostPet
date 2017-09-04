@@ -54,12 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<p class="location">Universidad de Belgrano</p>
 				<p class="phonenum">
-					<g:if test="${logged == true}">
-						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> ${username}
-					</g:if>
-					<g:else>
-						<img src="${resource(dir:'images', file:'user.png')}" alt="" /> No logueado
-					</g:else>
+					<img src="${resource(dir:'images', file:'user.png')}" alt="" /> No logueado
 				</p>
 				<div class="clearfix"></div>
 			</div>
@@ -74,21 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 						<nav class="cl-effect-5">
 							<li><a class="active" href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
-							<g:if test="${logged == true}">
-								<li><a href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
-							</g:if>
-							<g:if test="${logged == true}">
-								<li>
-									<a>
-										<form method="post" controller="login" action="logout">
-												<input type="submit" class="submitLink" value="  SALIR"/>
-										</form>
-									</a>
-								</li>
-							</g:if>
-							<g:else>
-								<li><a href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
-							</g:else>
+							<li><a href="${createLink(controller: 'login', action: 'index')}">Entrar</a></li>
 						</nav>
 					</ul>
 				</div>

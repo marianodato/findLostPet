@@ -12,31 +12,6 @@ class UrlMappings {
             action = [GET: "index"]
         }
 
-        "/info"{
-            controller = "info"
-            action = [GET: "index"]
-        }
-
-        "/contact"{
-            controller = "contact"
-            action = [GET: "index"]
-        }
-
-        "/photos"{
-            controller = "photos"
-            action = [GET: "index"]
-        }
-
-        "/blogs"{
-            controller = "blogs"
-            action = [GET: "index"]
-        }
-
-        "/blog"{
-            controller = "blog"
-            action = [GET: "index"]
-        }
-
         "/login"{
             controller = "login"
             action = [GET:"index", POST: "login"]
@@ -61,6 +36,46 @@ class UrlMappings {
             controller = "post"
             action = [GET: "index", POST: "post"]
         }
+
+        "/pet"{
+            controller = "pet"
+            action = [GET:"index"]
+        }
+
+        "/finish"{
+            controller = "pet"
+            action = [POST:"finishSearch"]
+        }
+
+        "/image"{
+            controller = "image"
+            action = [GET:"index"]
+        }
+
+        /*"/info"{
+            controller = "info"
+            action = [GET: "index"]
+        }
+
+        "/contact"{
+            controller = "contact"
+            action = [GET: "index"]
+        }
+
+        "/photos"{
+            controller = "photos"
+            action = [GET: "index"]
+        }
+
+        "/blogs"{
+            controller = "blogs"
+            action = [GET: "index"]
+        }
+
+        "/blog"{
+            controller = "blog"
+            action = [GET: "index"]
+        }*/
 
         "500"(controller: "error", action: "handleError")
         "/**"(controller: "error", action: "notFound")

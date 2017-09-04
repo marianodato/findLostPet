@@ -54,7 +54,6 @@
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.0/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.0/src/groovy" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/target/work/plugins/spock-0.7" />
     <content url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.53">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.53/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.53/src/groovy" isTestSource="false" />
@@ -184,7 +183,6 @@
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.0/dist/grails-test-2.5.0.jar!/" />
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.0/dist/grails-plugin-testing-2.5.0.jar!/" />
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.0/lib/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/spockframework/spock-grails-support/0.7-groovy-2.0/spock-grails-support-0.7-groovy-2.0.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-test-support/1.0.2-grails-2.4/grails-datastore-test-support-1.0.2-grails-2.4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/7.0.53/tomcat-embed-core-7.0.53.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/3.7.2/ecj-3.7.2.jar!/" />

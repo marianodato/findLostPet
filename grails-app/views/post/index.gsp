@@ -74,14 +74,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
+                <a href="${createLink(controller: 'pet', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
             </div>
             <span class="menu"></span>
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
-                        <li><a href="${createLink(controller: 'home', action: 'index')}">Inicio</a></li>
-                        <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Post</a></li>
+                        <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
+                        <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">
@@ -114,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h2>Carga</h2>
                 <form method="post" action="post" enctype="multipart/form-data">
                     <noscript>
-                        <div name="message" id="no_js_message" class="message">Please enable javascript and reload the page</div>
+                        <div name="message" id="no_js_message" class="message">Por favor habilite javascript y recargue la página</div>
                     </noscript>
                     <g:if test="${message}">
                         <div name="message" id="message" class="message">${message}</div>
@@ -244,7 +244,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     var selectPetRaces = document.getElementById("selectPetRaces");
     var inputPetRacesOther = document.getElementById("inputPetRacesOther");
     var optionsPetRaces = document.getElementsByName("optionsPetRaces");
-    var optionPetRacesOther = document.getElementById("optionPetRacesOther");
     var latitude =  document.getElementById("latitude");
     var longitude =  document.getElementById("longitude");
     var i = 0;
