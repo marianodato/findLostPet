@@ -206,6 +206,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span><input id="latitude" type="hidden" name="latitude" class="latitude"/></span>
                         </div>
                         <div id="map" class="map"></div>
+                        <script type="text/javascript">
+                            function initMap() {
+                                map = new google.maps.Map(document.getElementById('map'), {
+                                    center: {lat: -34.603722, lng: -58.381592},
+                                    zoom: 11
+                                });
+
+                                map.addListener('click', function(event) {
+                                    addMarker(event.latLng);
+                                });
+                            }
+                        </script>
                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg1CQ0HmU3luoSsa5cqSsNlFSyXwCcvJE&callback=initMap"
                                 async defer></script>
                         <div>
@@ -347,17 +359,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     selectPetRaces.addEventListener("change", function() {
         petRacesLogic();
     });
-
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.603722, lng: -58.381592},
-            zoom: 11
-        });
-
-        map.addListener('click', function(event) {
-            addMarker(event.latLng);
-        });
-    }
 
     function addMarker(location) {
         if (marker) {
