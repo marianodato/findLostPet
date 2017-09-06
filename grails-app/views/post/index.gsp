@@ -213,6 +213,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     zoom: 11
                                 });
 
+                                // Try HTML5 geolocation.
+                                if (navigator.geolocation) {
+                                    navigator.geolocation.getCurrentPosition(function(position) {
+                                        var pos = {
+                                            lat: position.coords.latitude,
+                                            lng: position.coords.longitude
+                                        };
+                                        map.setCenter(pos);
+                                    });
+                                }
+
                                 map.addListener('click', function(event) {
                                     addMarker(event.latLng);
                                 });
