@@ -18,7 +18,6 @@ class Pet {
     static mapping = {
         version false
         autoTimestamp false
-        status index:'status_id'
         image sqlType: 'longblob'
     }
 
