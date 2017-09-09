@@ -15,7 +15,7 @@ class SecurityFilters {
                 log.info("forwardURI: " +  request.forwardURI)
                 log.info("queryString: " +  request.queryString)
 
-                if (request.requestURL.substring(0,5) != "https" && !Environment.isDevelopmentMode()) {
+                if (!(request.isSecure() || request.getHeader('X-Forwarded-Proto')?.toLowerCase() == 'https') && !Environment.isDevelopmentMode()) {
                     def url = "https://" + request.serverName + request.forwardURI + (request.queryString ? "?" + request.queryString : "")
                     log.info("Redirect url: " +  url)
                     redirect(url: url, permanent: true)
