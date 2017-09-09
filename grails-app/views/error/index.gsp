@@ -131,9 +131,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
+
+
 			<!-- content-section-ends -->
             <!-- footer-section-starts -->
-			<div class="header">
+			<div class="header" style="padding-top: 103px">
 				<div class="header-top" style="background-color: #474747;">
 					<div class="container">
 						<p class="location">Copyright © 2017 FindLostPet</p>

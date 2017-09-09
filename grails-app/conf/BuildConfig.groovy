@@ -49,33 +49,17 @@ grails.project.dependency.resolution = {
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-        // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         runtime 'mysql:mysql-connector-java:5.1.27'
         runtime "org.springframework:spring-test:4.2.1.RELEASE"
-        runtime group:'net.sf.json-lib', name:'json-lib', version:'2.4', classifier:'jdk15'
-
-        test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
     }
 
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.53"
 
-        // plugins for the compile step
-        compile ":scaffolding:2.1.0"
-        compile ':cache:1.1.8'
-
         // plugins needed at runtime but not for compilation
-        runtime ':twitter-bootstrap:3.3.5'
         runtime ':resources:1.2.14'
         runtime ":hibernate:3.6.10.15"
         runtime ":database-migration:1.4.0"
-        runtime ":jquery:1.11.1"
-
-        // Uncomment these to enable additional asset-pipeline capabilities
-        //compile ":sass-asset-pipeline:1.9.0"
-        //compile ":less-asset-pipeline:1.10.0"
-        //compile ":coffee-asset-pipeline:1.8.0"
-        //compile ":handlebars-asset-pipeline:1.3.0.3"
     }
 }

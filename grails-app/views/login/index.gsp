@@ -223,6 +223,16 @@ h1{
     </div>
 </div>
 
+<!-- footer-section-starts -->
+<div class="header" style="padding-top: 249px">
+    <div class="header-top" style="background-color: #474747;">
+        <div class="container">
+            <p class="location">Copyright © 2017 FindLostPet</p>
+        </div>
+    </div>
+</div>
+<!-- footer-section-ends -->
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
     <script>
         function field_focus(field, value)
