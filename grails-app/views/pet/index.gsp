@@ -102,18 +102,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
-
-    <!-- content-section-ends -->
-    <!-- footer-section-starts -->
-    <div class="header" style="padding-top: 103px;">
-        <div class="header-top" style="background-color: #474747;">
-            <div class="container">
-                <p class="location">Copyright © 2017 FindLostPet</p>
-            </div>
-        </div>
-    </div>
-    <!-- footer-section-ends -->
-
 </g:if>
 <g:else>
     <div class="content">
@@ -156,10 +144,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                         <form method="post" action="finish">
                                                             <span><input value="${it.id}" type="hidden" name="petId"/></span>
                                                             <g:if test="${it.status != 'finished'}">
-                                                                <span><input type="submit" value="Terminar búsqueda" class="myButton" style="float: left"></span>
+                                                                <span><input type="submit" value="Finalizar" class="myButton" style="float: left"></span>
                                                             </g:if>
                                                             <g:else>
-                                                                <span><input type="submit" disabled value="Búsqueda terminada" class="myButton" style="float: left; background: #212425"></span>
+                                                                <span><input type="submit" disabled value="Finalizado" class="myButton" style="float: left; background: #212425"></span>
                                                             </g:else>
                                                         </form>
                                                 </div>
@@ -193,17 +181,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 </div>
 </div>
-    <!-- content-section-ends -->
-    <!-- footer-section-starts -->
+</g:else>
+
+
+<!-- content-section-ends -->
+<!-- footer-section-starts -->
+<g:if test="${pets.size() == 0}">
+    <div class="header" style="padding-top: 103px;">
+</g:if>
+<g:elseif test="${pets.size() == 1}">
+    <div class="header" style="padding-top: 35px;">
+</g:elseif>
+<g:else>
     <div class="header">
-        <div class="header-top" style="background-color: #474747;">
-            <div class="container">
-                <p class="location">Copyright © 2017 FindLostPet</p>
-            </div>
+</g:else>
+    <div class="header-top" style="background-color: #474747;">
+        <div class="container">
+            <p class="location">Copyright © 2017 FindLostPet</p>
         </div>
     </div>
-    <!-- footer-section-ends -->
-</g:else>
+</div>
+<!-- footer-section-ends -->
 
 <script type="text/javascript">
 

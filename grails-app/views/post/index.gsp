@@ -135,14 +135,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span><label>DESCRIPCIÓN</label></span>
                             <span><textarea name="description" class="description" required="required"></textarea></span>
                         </div>
-                        <div class="left_form">
+                        <div>
                             <div style="text-align:left">
                                 <span><label>GÉNERO</label></span>
                                 <input type="radio" name="gender" value="male" checked > Masculino<br>
                                 <input type="radio" name="gender" value="female" > Femenino<br>
                             </div>
                         </div>
-                        <div class="rigth_form">
+                        <div>
                             <div>
                                 <span><label>IMÁGEN</label></span>
                                 <input type="file" name="image" accept="image/*">
