@@ -2,34 +2,15 @@
 <html>
 <head>
 	<title>FindLostPet | Error</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
-	<!-- Custom Theme files -->
-	<link href="${resource(dir:'css', file:'style.css')}" rel='stylesheet' type='text/css' media='all' />
-	<!-- Custom Theme files -->
-	<!-- navigation -->
-	<!-- navigation -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="My Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Custom Theme files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="${resource(dir:'css', file:'style.css')}" rel='stylesheet' type='text/css' media='all' />
 	<!--webfont-->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<script src="${resource(dir:'js', file:'responsiveslides.min.js')}"></script>
-	<script>
-        $(function () {
-            $("#slider").responsiveSlides({
-                auto: true,
-                speed: 500,
-                namespace: "callbacks",
-                pager: true,
-            });
-        });
-	</script>
-	<script type="text/javascript" src="${resource(dir:'js', file:'move-top.js')}"></script>
-	<script type="text/javascript" src="${resource(dir:'js', file:'easing.js')}"></script>
 </head>
 <style>
 .submitLink {
@@ -46,7 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	text-decoration:none;
 }
 </style>
-	<body>
+<body>
 		<g:if env="development">
 			<g:renderException exception="${exception}" />
 		</g:if>
@@ -99,15 +80,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</nav>
 							</ul>
 						</div>
-						<!-- script for menu -->
-						<script>
-                            $( "span.menu" ).click(function() {
-                                $( ".top-menu" ).slideToggle( "slow", function() {
-                                    // Animation complete.
-                                });
-                            });
-						</script>
-						<!-- script for menu -->
 						<div class="clearfix"></div>
 					</div>
 				</div>
@@ -132,7 +104,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 
-
 			<!-- content-section-ends -->
             <!-- footer-section-starts -->
 			<div class="header" style="padding-top: 103px">
@@ -143,23 +114,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<!-- footer-section-ends -->
+			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+		</g:else>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
+			<script src="${resource(dir:'js', file:'responsiveslides.min.js')}"></script>
+			<script type="text/javascript" src="${resource(dir:'js', file:'move-top.js')}"></script>
+			<script type="text/javascript" src="${resource(dir:'js', file:'easing.js')}"></script>
+			<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+			<script>
+                $(function () {
+                    $("#slider").responsiveSlides({
+                        auto: true,
+                        speed: 500,
+                        namespace: "callbacks",
+                        pager: true
+                    });
+                });
+			</script>
+			<!-- script for menu -->
+			<script>
+                $( "span.menu" ).click(function() {
+                    $( ".top-menu" ).slideToggle( "slow", function() {
+                        // Animation complete.
+                    });
+                });
+			</script>
+			<!-- script for menu -->
 			<script type="text/javascript">
                 $(document).ready(function() {
-                    /*
-                    var defaults = {
-                          containerID: 'toTop', // fading element id
-                        containerHoverID: 'toTopHover', // fading element hover id
-                        scrollSpeed: 1200,
-                        easingType: 'linear'
-                     };
-                    */
 
                     $().UItoTop({ easingType: 'easeOutQuart' });
 
                 });
 			</script>
-			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-
-		</g:else>
 	</body>
 </html>
