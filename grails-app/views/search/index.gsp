@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </noscript>
                     <div class="content_bottom">
                         <g:each in="${pets}">
-                            <div>
+                            <div style="display: none;">
                                 <span><input name="pets" type="hidden" data-description="${it.description}" data-pet_race="${it.petRace.description}" data-pet_type="${it.petType.description}" data-pet_size="${it.petSize.description}" data-pet_color="${it.petColor.description}" data-gender="${it.gender}" data-created="${it.dateCreated.format('dd/MM/yy HH:mm:ss')}" data-status="${it.status}" data-pet_user_id="${it.user.id}" data-user_id="${user.id}"  data-nickname="${it.nickname}" data-id="${it.id}" data-image="${it.image}" data-latitude="${it.latitude}" data-longitude="${it.longitude}"/></span>
                             </div>
                         </g:each>
