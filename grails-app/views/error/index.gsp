@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="container">
 						<div class="logo">
 							<g:if test="${logged == true}">
-								<a href="${createLink(controller: 'pet', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
+								<a href="${createLink(controller: 'search', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
 							</g:if>
 							<g:else>
 								<a href="${createLink(controller: 'home', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
@@ -63,8 +63,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul>
 								<nav class="cl-effect-5">
 									<g:if test="${logged == true}">
+										<li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
+										<li><a href="${createLink(controller: 'post', action: 'index')}">Cargar</a></li>
 										<li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
-										<li><a href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
 										<li>
 											<a>
 												<form method="post" controller="login" action="logout">
@@ -94,7 +95,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h1>Ups...</h1>
 							<h2>Disculpa, ocurrió un error en el servidor!</h2>
 							<g:if test="${logged == true}">
-								<a class="hvr-bounce-to-left button" href="${createLink(controller: 'pet', action: 'index')}">Volver</a>
+								<a class="hvr-bounce-to-left button" href="${createLink(controller: 'search', action: 'index')}">Volver</a>
 							</g:if>
 							<g:else>
 								<a class="hvr-bounce-to-left button" href="${createLink(controller: 'home', action: 'index')}">Volver</a>

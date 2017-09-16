@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FindLostPet | Carga</title>
+    <title>FindLostPet | Cargar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="My Pets Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -51,14 +51,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'pet', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
+                <a href="${createLink(controller: 'search', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
             </div>
             <span class="menu"></span>
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
+                        <li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
+                        <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Cargar</a></li>
                         <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
-                        <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">
@@ -79,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="main">
         <div class="container">
             <div class="contact-form">
-                <h2>Carga</h2>
+                <h2>Cargar</h2>
                 <form method="post" action="post" enctype="multipart/form-data">
                     <noscript>
                         <div name="message" id="no_js_message" class="message">Por favor habilite javascript y recargue la página</div>
@@ -176,7 +177,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div id="map" class="map"></div>
                         <script type="text/javascript">
                             function initMap() {
-                                map = new google.maps.Map(document.getElementById('map'), {
+                                var map = new google.maps.Map(document.getElementById('map'), {
                                     center: {lat: -34.603722, lng: -58.381592},
                                     zoom: 11
                                 });
@@ -193,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 }
 
                                 map.addListener('click', function(event) {
-                                    addMarker(event.latLng);
+                                    addMarker(map, event.latLng);
                                 });
                             }
                         </script>
@@ -224,7 +225,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!-- footer-section-ends -->
-<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="${resource(dir:'js', file:'jquery.min.js')}"></script>
@@ -252,6 +252,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 <!-- script for menu -->
 <script type="text/javascript">
+
     var selectPetColors = document.getElementById("selectPetColors");
     var inputPetColorsOther = document.getElementById("inputPetColorsOther");
     var selectPetSizes = document.getElementById("selectPetSizes");
@@ -263,10 +264,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     var optionsPetRaces = document.getElementsByName("optionsPetRaces");
     var latitude =  document.getElementById("latitude");
     var longitude =  document.getElementById("longitude");
-    var i = 0;
-    var first = true;
-    var petTypeId;
-    var map;
     var marker;
 
     $(document).ready(function() {
@@ -299,6 +296,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     function petTypesLogic(){
         var optionPetTypesSelectedText = selectPetTypes.options[selectPetTypes.selectedIndex].text;
+        var i = 0;
+        var petTypeId;
+        var first = true;
         inputPetRacesOther.type = 'text';
         selectPetRaces.selectedIndex = optionsPetRaces.length;
 
@@ -356,12 +356,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         petRacesLogic();
     });
 
-    function addMarker(location) {
+    function addMarker(map, location) {
         if (marker) {
             marker.setPosition(location);
         } else {
             marker = new google.maps.Marker({
                 position: location,
+                icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
                 map: map
             });
         }

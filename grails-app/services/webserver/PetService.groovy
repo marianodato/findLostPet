@@ -58,6 +58,10 @@ class PetService {
         resp.message = "Modificación exitosa!"
         resp.status = 201
         return resp
+    }
 
+    def getNotFinishedPets(){
+        def pets = Pet.findAllByStatusNotLike("finished")
+        return pets
     }
 }

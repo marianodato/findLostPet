@@ -37,14 +37,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="header-bottom">
         <div class="container">
             <div class="logo">
-                <a href="${createLink(controller: 'pet', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
+                <a href="${createLink(controller: 'search', action: 'index')}"><img src="${resource(dir:'images', file:'logo2.png')}" alt="" /></a>
             </div>
             <span class="menu"></span>
             <div class="top-menu">
                 <ul>
                     <nav class="cl-effect-5">
+                        <li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
+                        <li><a href="${createLink(controller: 'post', action: 'index')}">Cargar</a></li>
                         <li><a class="active" href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
-                        <li><a href="${createLink(controller: 'post', action: 'index')}">Carga</a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">
@@ -102,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <p><span>${it.nickname}</span></p>
                                                 <p class="post"><b>Estado:</b> <g:if test="${it.status == 'lost'}">Perdido</g:if><g:elseif test="${it.status == 'found'}">Encontrado</g:elseif><g:else>Finalizado</g:else><br/>
                                                     <b>Posteado:</b> ${it.dateCreated.format('dd/MM/yy HH:mm:ss')}<br/>
-                                                    <b>Genero:</b> <g:if test="${it.gender == 'male'}">Masculino</g:if><g:else>Femenino</g:else><br/>
+                                                    <b>Género:</b> <g:if test="${it.gender == 'male'}">Masculino</g:if><g:else>Femenino</g:else><br/>
                                                     <b>Color:</b> ${it.petColor.description}<br/>
                                                     <b>Tamaño:</b> ${it.petSize.description}<br/>
                                                     <b>Tipo:</b> ${it.petType.description}<br/>
@@ -201,10 +202,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- script for menu -->
 <script type="text/javascript">
 
-    var selectedPage = document.getElementById("page-"+${page});
-    selectedPage.style = "background:#4597a8;color:#FFF;text-decoration:underline;";
-
     $(document).ready(function() {
+
+        var selectedPage = document.getElementById("page-"+${page});
+        selectedPage.style = "background:#4597a8;color:#FFF;text-decoration:underline;";
 
         $().UItoTop({ easingType: 'easeOutQuart' });
 

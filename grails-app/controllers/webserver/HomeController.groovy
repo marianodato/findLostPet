@@ -11,7 +11,7 @@ class HomeController {
 
         if (user){
             log.info("User_id: " + user.id)
-            redirect(controller: "pet", action: "index")
+            redirect(controller: "search", action: "index")
             return
         }
 
