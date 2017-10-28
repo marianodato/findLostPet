@@ -27,11 +27,6 @@ class UrlMappings {
             action = [POST: "logout"]
         }
 
-        "/ping" {
-            controller = "ping"
-            action = [GET: "index"]
-        }
-
         "/post" {
             controller = "post"
             action = [GET: "index", POST: "post"]
@@ -39,12 +34,7 @@ class UrlMappings {
 
         "/pet"{
             controller = "pet"
-            action = [GET:"index"]
-        }
-
-        "/finish"{
-            controller = "pet"
-            action = [POST:"finishSearch"]
+            action = [GET:"index", POST:"finishSearch"]
         }
 
         "/image"{
@@ -54,33 +44,18 @@ class UrlMappings {
 
         "/search"{
             controller = "search"
+            action = [GET:"index", POST:"contact"]
+        }
+
+        "/activity"{
+            controller = "activity"
             action = [GET:"index"]
         }
 
-        /*"/info"{
-            controller = "info"
+        "/ping" {
+            controller = "ping"
             action = [GET: "index"]
         }
-
-        "/contact"{
-            controller = "contact"
-            action = [GET: "index"]
-        }
-
-        "/photos"{
-            controller = "photos"
-            action = [GET: "index"]
-        }
-
-        "/blogs"{
-            controller = "blogs"
-            action = [GET: "index"]
-        }
-
-        "/blog"{
-            controller = "blog"
-            action = [GET: "index"]
-        }*/
 
         "500"(controller: "error", action: "handleError")
         "/**"(controller: "error", action: "notFound")

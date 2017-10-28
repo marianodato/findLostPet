@@ -56,6 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a class="active" href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
                         <li><a href="${createLink(controller: 'post', action: 'index')}">Cargar</a></li>
                         <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
+                        <li><a <g:if test="${pending}">style="color: #FF0000"</g:if> href="${createLink(controller: 'activity', action: 'index')}">Actividad <g:if test="${pending}">(${pending})</g:if></a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">
@@ -101,11 +102,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <span><input name="pets" type="hidden" data-description="${it.description}" data-pet_race="${it.petRace.description}" data-pet_type="${it.petType.description}" data-pet_size="${it.petSize.description}" data-pet_color="${it.petColor.description}" data-gender="${it.gender}" data-created="${it.dateCreated.format('dd/MM/yy HH:mm:ss')}" data-status="${it.status}" data-pet_user_id="${it.user.id}" data-user_id="${user.id}"  data-nickname="${it.nickname}" data-id="${it.id}" data-image="${it.image}" data-latitude="${it.latitude}" data-longitude="${it.longitude}"/></span>
                             </div>
                         </g:each>
+                        <g:each in="${notifications}">
+                            <div style="display: none;">
+                                <span><input name="notifications" type="hidden" data-notification_pet_id="${it.pet.id}"/></span>
+                            </div>
+                        </g:each>
                         <div id="map" class="map"></div>
                         <script type="text/javascript">
                             var marker;
                             var infowindow;
                             var pets = document.getElementsByName("pets");
+                            var notifications = document.getElementsByName("notifications");
 
                             function addMarker(map, id, location, pinImage) {
                                 marker = new google.maps.Marker({
@@ -229,7 +236,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 
     function updateContentString(idx){
-
+        var i = 0;
+        var connected = false;
         var id = pets[idx].dataset.id;
         var image = pets[idx].dataset.image;
         var nickname = pets[idx].dataset.nickname;
@@ -241,6 +249,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         var pet_race = pets[idx].dataset.pet_race;
         var status = pets[idx].dataset.status;
         var description = pets[idx].dataset.description;
+        var user_id = pets[idx].dataset.user_id;
+        var pet_user_id = pets[idx].dataset.pet_user_id;
         var contentString = "";
 
         contentString += "<div class=\"blog_posts\" style=\"font-size: 18px;\">" +
@@ -289,8 +299,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             "<b>Descripción: </b>"+ description + "<br/><br/>" +
             "</p>" +
             "</div>" +
-            "</div>" +
-            "</div>" +
+            "</div>";
+
+        if (user_id != pet_user_id){
+
+            for (i=0; i < notifications.length ;i++){
+                if(notifications[i].dataset.notification_pet_id == id){
+                    connected = true;
+                    break;
+                }
+            }
+
+            contentString += "<form method=\"post\" action=\"search\">" +
+                "<span><input value=\"" + id + "\" type=\"hidden\" name=\"petId\"/></span>";
+
+            if (connected){
+                contentString += "<span><input type=\"submit\" disabled value=\"Contactado\" class=\"myButton\" style=\"float: left; background: #212425\"></span>";
+            }else{
+                contentString += "<span><input type=\"submit\" value=\"Contactar\" class=\"myButton\" style=\"float: left\"></span>";
+            }
+
+            contentString += "</form>";
+        }
+
+        contentString += "</div>" +
             "</div>";
 
         return contentString;

@@ -7,8 +7,8 @@ import spock.lang.Specification
 class PasswordHashSpec extends Specification {
 
     void setup(){
-        org.apache.log4j.BasicConfigurator.configure();
-        LogManager.getRootLogger().setLevel(Level.INFO);
+        org.apache.log4j.BasicConfigurator.configure()
+        LogManager.getRootLogger().setLevel(Level.INFO)
     }
 
     void "test password hash"() {

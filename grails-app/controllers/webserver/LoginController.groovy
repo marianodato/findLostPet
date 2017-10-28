@@ -32,10 +32,8 @@ class LoginController {
         log.info("Params: " + params)
 
         if(params.sign_up){
-
             redirect(controller: "registration", action: "index")
             return
-
         }
 
         resp = loginService.doLogin(params.username, params.password)

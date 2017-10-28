@@ -44,7 +44,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- header-section-ends -->
 	<div class="banner">
-		<!----->
 	<div class="slider">	  
 		  <div class="callbacks_container">
 			  <ul class="rslides" id="slider">
@@ -72,7 +71,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  </ul>	      
 		  </div>
 	</div>
-	<!----->
 	</div>
 	<!-- content-section-starts -->
 		<div class="content">

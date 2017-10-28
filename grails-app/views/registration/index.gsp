@@ -175,8 +175,8 @@ h1{
                             <input type="radio" name="gender" value="male" checked > Masculino<br>
                             <input type="radio" name="gender" value="female" > Femenino<br>
                         </div>
-                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/> <!-- End Btn2 -->
-                    </div> <!-- End Box -->
+                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/>
+                    </div>
                 </form>
             </div>
         </div>

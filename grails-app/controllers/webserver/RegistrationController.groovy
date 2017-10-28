@@ -40,6 +40,5 @@ class RegistrationController {
 
         render (view:"/registration/index", model:[message:resp.message])
         return
-
     }
 }

@@ -154,11 +154,10 @@ h1{
                         </g:if>
                         <input type="text" name="username" value="Usuario" onFocus="field_focus(this, 'Usuario');" onblur="field_blur(this, 'Usuario');" class="username" required="required" />
                         <input type="password" name="password" value="Contraseña" onFocus="field_focus(this, 'Contraseña');" onblur="field_blur(this, 'Password');" class="username" required="required" />
-                        <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Entrar"/> <!-- End Btn -->
-                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/> <!-- End Btn2 -->
-                    </div> <!-- End Box -->
+                        <g:submitButton disabled="false" class="btn2" id="sign_in" name="sign_in" value="Entrar"/>
+                        <g:submitButton disabled="false" class="btn3" id="sign_up" name="sign_up" value="Registrarme"/>
+                    </div>
                 </form>
-                <!--<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>-->
             </div>
         </div>
     </div>

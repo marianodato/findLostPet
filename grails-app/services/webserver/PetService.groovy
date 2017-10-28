@@ -7,6 +7,7 @@ class PetService {
 
     static limit = 3
     def utilsService
+    def notificationService
 
     def getUserPets(User user, def page) {
 
@@ -19,7 +20,7 @@ class PetService {
         if (page > pages)
             page = 1
 
-        def pets = Pet.findAll("from Pet as p where p.user=? order by p.dateCreated desc",
+        def pets = Pet.findAll("from Pet as p where p.user=? order by p.lastUpdated desc",
                 [user], [max: limit, offset: limit*(page-1)])
 
         return [pets:pets, page:page, pages:pages]
@@ -45,6 +46,8 @@ class PetService {
         }
 
         pet.status = "finished"
+        Date date = new Date()
+        pet.lastUpdated = date
 
         if (!utilsService.saveInstance(pet)){
             pet.discard()
@@ -53,6 +56,8 @@ class PetService {
             }
             throw new RuntimeException("Error saving to Pet table.Pet: " + pet)
         }
+
+        notificationService.updateNotification(pet)
 
         log.info("Pet updated successfully!")
         resp.message = "Modificación exitosa!"

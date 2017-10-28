@@ -30,7 +30,7 @@ class RegistrationService {
 
         def hash = PasswordHash.createHash(password)
 
-        user = new User (username: username, password: hash, email: email, name: name, phoneNumber: phone_number, gender: gender, isAdmin:false, sessionToken: null)
+        user = new User (username: username, password: hash, email: email, name: name, phoneNumber: phone_number, gender: gender, sessionToken: null)
         user.dateCreated = new Date()
 
         if (!utilsService.saveInstance(user)){

@@ -9,8 +9,8 @@ import spock.lang.Specification
 class PingControllerSpec extends Specification {
 
 	void setup(){
-		org.apache.log4j.BasicConfigurator.configure();
-		LogManager.getRootLogger().setLevel(Level.INFO);
+		org.apache.log4j.BasicConfigurator.configure()
+		LogManager.getRootLogger().setLevel(Level.INFO)
 	}
 
 	void "test ping"() {

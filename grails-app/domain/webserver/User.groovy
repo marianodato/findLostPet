@@ -9,7 +9,6 @@ class User {
     String email
     String phoneNumber
     Date dateCreated
-    boolean isAdmin
     String sessionToken
     static hasMany = [pets: Pet, notifications: Notification]
 
@@ -26,7 +25,6 @@ class User {
         name blank:false, nullable: false
         gender blank:false, nullable: false, matches: '^male$|^female$'
         dateCreated blank:false, nullable: false
-        isAdmin blank:false, nullable: false
         sessionToken blank:false, nullable: true, size: 128..128, unique: true
     }
 }

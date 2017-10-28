@@ -6,6 +6,7 @@ class PostController {
 
     def sessionService
     def postService
+    def notificationService
 
     def index(){
 
@@ -27,13 +28,13 @@ class PostController {
         def petRaces = PetRace.list()
         log.info("petRaces: " + petRaces)
 
-
         def model = [:]
         model.username = user.username
         model.petColors = petColors
         model.petSizes = petSizes
         model.petTypes = petTypes
         model.petRaces = petRaces
+        model.pending = notificationService.needToNotify(user)
 
         render (view:"/post/index", model:model)
         return
@@ -65,7 +66,6 @@ class PostController {
             }
             file.delete()
         }
-
 
         resp = postService.createPost(user, params)
 

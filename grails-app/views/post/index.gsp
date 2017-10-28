@@ -60,6 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="${createLink(controller: 'search', action: 'index')}">Buscar</a></li>
                         <li><a class="active" href="${createLink(controller: 'post', action: 'index')}">Cargar</a></li>
                         <li><a href="${createLink(controller: 'pet', action: 'index')}">Mis mascotas</a></li>
+                        <li><a <g:if test="${pending}">style="color: #FF0000"</g:if> href="${createLink(controller: 'activity', action: 'index')}">Actividad <g:if test="${pending}">(${pending})</g:if></a></li>
                         <li>
                             <a>
                                 <form method="post" controller="login" action="logout">

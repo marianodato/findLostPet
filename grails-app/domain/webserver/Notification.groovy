@@ -4,7 +4,8 @@ class Notification {
 
     static belongsTo = [user: User, pet: Pet]
     Date dateCreated
-    boolean isSeenByUser
+    Date lastUpdated
+    Long notSeenByUser
 
     static mapping = {
         version false
@@ -13,6 +14,7 @@ class Notification {
 
     static constraints = {
         dateCreated blank:false, nullable: false
-        isSeenByUser blank:false, nullable: false
+        lastUpdated blank:false, nullable: false
+        notSeenByUser blank:false, nullable: true
     }
 }

@@ -4,6 +4,7 @@ class PetController {
 
     def sessionService
     def petService
+    def notificationService
 
     def index() {
 
@@ -32,6 +33,7 @@ class PetController {
         model.pets = resp.pets
         model.page = resp.page
         model.pages = resp.pages
+        model.pending = notificationService.needToNotify(user)
 
         render (view:"/pet/index", model:model)
         return
@@ -51,9 +53,7 @@ class PetController {
 
         petService.updatePetStatus(params.petId, user)
 
-        redirect(controller: "pet", action: "index")
+        redirect(controller: "activity", action: "index")
         return
     }
-
-
 }

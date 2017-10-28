@@ -23,6 +23,6 @@ class ImageController {
         response.contentLength = pet.image.length
         response.contentType = pet.imageContentType
         response.outputStream << pet.image
-
+        return
     }
 }
